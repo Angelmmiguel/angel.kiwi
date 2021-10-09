@@ -1,0 +1,22 @@
+{
+  "name": "angel.kiwi",
+  "version": "0.1.0",
+  "description": "My (latest) personal site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "@11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angelmmiguel/angel.kiwi.git"
+  },
+  "author": "Angel M Miguel <hi@angel.kiwi>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Angelmmiguel/angel.kiwi/issues"
+  },
+  "homepage": "https://github.com/Angelmmiguel/angel.kiwi#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
