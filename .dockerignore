@@ -1,0 +1,15 @@
+node_modules
+.next
+test.*
+.eslintrc
+.prettierignore
+*.md
+*.sketch
+.vscode
+.git
+.gitignore
+.dockerignore
+Dockerfile
+scripts
+README.md
+_site
