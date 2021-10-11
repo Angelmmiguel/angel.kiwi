@@ -1,24 +1,22 @@
 <head>
   <title>Angel.kiwi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/static/favicon.svg">
-
-  <!-- Styles -->
-  <link href="/static/css/main.css" rel="stylesheet" />  
-
-  <!-- Font families -->
-  <!-- Load from https://csswizardry.com/2020/05/the-fastest-google-fonts/ --> 
-  <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin />
-  <link rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap"
-    media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" />
-  </noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" href="/static/favicon.svg"/>
+  <style>
+    @font-face {
+      font-display: swap;
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/static/fonts/nunito-sans-regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-display: swap;
+      font-family: 'Nunito Sans';
+      font-style: normal;
+      font-weight: 800;
+      src: url('/static/fonts/nunito-sans-bold.woff2') format('woff2');
+    }
+  </style>
+  <link href="/static/css/main.css" rel="stylesheet"/>
 </head>

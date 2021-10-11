@@ -4,7 +4,9 @@
   "description": "My (latest) personal site",
   "main": "index.js",
   "scripts": {
-    "dev": "@11ty/eleventy --serve"
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "optimize-svg": "npx svgo ./static/**/*.svg"
   },
   "repository": {
     "type": "git",

@@ -105,3 +105,6 @@ dist
 
 # Eleventy
 _site
+
+# Mac Stuff
+.DS_Store
