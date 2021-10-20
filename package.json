@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Angelmmiguel/angel.kiwi#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7"
   }
 }
