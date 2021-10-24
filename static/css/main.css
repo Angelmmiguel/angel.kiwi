@@ -22,7 +22,7 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   line-height: 1.45;
-  background: var(--color-background);
+  background-color: var(--color-background);
   color: var(--color-text);
   display: grid;
   grid-template-columns: 1fr;
@@ -33,6 +33,7 @@ body {
     "footer";
   min-height: 100vh;
   margin: 0;
+  transition: color 0.125s ease-in-out, background-color 0.125s ease-in-out;
 }
 
 a {
@@ -97,6 +98,14 @@ header.top {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.logo-text {
+  color: var(--color-text);
+}
+
+.logo-accent {
+  color: var(--color-primary);
 }
 
 /* Main */

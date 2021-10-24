@@ -1,0 +1,11 @@
+/* Dark theme */
+:root {
+  --color-text: #ece7f5;
+  --color-text-light: #b6aebe;
+  --color-primary: #c96fff;
+  --color-secondary: #fc50eb;
+  --color-nav-decorator: #ffb7f4;
+  --color-border: #dfdfdf;
+  --color-background: #19141a;
+  --size-container-max-witdh: 980px;
+}
