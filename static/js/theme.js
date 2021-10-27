@@ -37,7 +37,7 @@
 
   switchTheme.addEventListener("click", () => {
     const value = localStorage.getItem(THEME_KEY);
-    const isDarkMode = value === THEME_DARK || isSystemDarkMode;
+    const isDarkMode = value ? value === THEME_DARK : isSystemDarkMode;
 
     if (isDarkMode) {
       disableDark();
