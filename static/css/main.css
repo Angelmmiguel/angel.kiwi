@@ -68,11 +68,13 @@ header.top {
 
 .top nav ul {
   display: flex;
+  align-items: center;
   justify-content: center;
   list-style: none;
 }
 
 .top nav li {
+  display: flex;
   padding: 0 1rem;
 }
 
@@ -106,6 +108,22 @@ header.top {
 
 .logo-accent {
   color: var(--color-primary);
+}
+
+/* Theme switcher */
+.theme-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.theme-icon-bg {
+  fill: var(--color-background);
+  stroke: var(--color-text);
+}
+
+.theme-icon-fg {
+  fill: var(--color-text);
 }
 
 /* Main */
