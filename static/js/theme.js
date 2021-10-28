@@ -1,50 +1,25 @@
 /**
  * Configure the button to switch the dark mode easily
  */
-
 (() => {
-  const THEME_KEY = "mode";
-  const THEME_LIGHT = "light";
-  const THEME_DARK = "dark";
-
-  // Style and button
-  const darkLink = document.querySelector("#dark-theme");
   const switchTheme = document.querySelector("#switch-theme");
+  const darkTheme = document.querySelector("#dark-theme");
 
-  // Identify style based on system preferences
-  const isSystemDarkMode =
-    matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
-  // Get color from localStorage
-  const currentValue = localStorage.getItem(THEME_KEY);
-
-  // Helpers
-  const enableDark = () => {
-    darkLink.disabled = false;
-    darkLink.media = "all";
-    switchTheme.ariaPressed = true;
-  };
-
-  const disableDark = () => {
-    darkLink.disabled = true;
-    switchTheme.ariaPressed = false;
-  };
-
-  if (currentValue === THEME_DARK && !isSystemDarkMode) {
-    enableDark();
-  } else if (currentValue === THEME_LIGHT && isSystemDarkMode) {
-    disableDark();
-  }
+  // Set initial state
+  switchTheme.setAttribute("aria-pressed", !darkTheme.disabled);
 
   switchTheme.addEventListener("click", () => {
-    const value = localStorage.getItem(THEME_KEY);
-    const isDarkMode = value ? value === THEME_DARK : isSystemDarkMode;
+    const value = localStorage.getItem(window.KIWI_THEME.key);
+    const isDarkMode = value
+      ? value === window.KIWI_THEME.dark
+      : isSystemDarkMode;
 
     if (isDarkMode) {
-      disableDark();
-      localStorage.setItem(THEME_KEY, THEME_LIGHT);
+      window.KIWI_THEME.disableDark(switchTheme);
+      localStorage.setItem(window.KIWI_THEME.key, window.KIWI_THEME.light);
     } else {
-      enableDark();
-      localStorage.setItem(THEME_KEY, THEME_DARK);
+      window.KIWI_THEME.enableDark(switchTheme);
+      localStorage.setItem(window.KIWI_THEME.key, window.KIWI_THEME.dark);
     }
   });
 })();
