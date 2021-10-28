@@ -148,24 +148,39 @@ footer.bottom:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 3rem;
+  text-align: center;
 }
 
 .footer-list li {
-  position: relative;
+  margin-bottom: 0.75rem;
 }
 
-.footer-list li:before {
-  content: "×";
-  color: var(--color-nav-decorator);
-  position: absolute;
-  top: 0;
-  left: -1.75rem;
+.footer-list li:last-child {
+  margin-bottom: 0;
 }
 
-.footer-list li:first-child:before {
-  content: "";
+@media screen and (min-width: 620px) {
+  .footer-list {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-list li {
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .footer-list li:before {
+    content: "×";
+    color: var(--color-nav-decorator);
+    position: absolute;
+    top: 0;
+    left: -1.75rem;
+  }
+
+  .footer-list li:first-child:before {
+    content: "";
+  }
 }
 
 .soon {
