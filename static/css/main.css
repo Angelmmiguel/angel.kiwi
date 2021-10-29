@@ -295,7 +295,7 @@ footer.bottom:hover {
 
   .hero:before {
     content: "";
-    background: url(/static/images/background.svg);
+    background: url(/static/images/background.svg?h=d20989a2caf979452a0b6d910bf534cf);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
