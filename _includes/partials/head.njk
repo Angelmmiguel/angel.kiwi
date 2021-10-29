@@ -2,25 +2,25 @@
   <title>Angel.kiwi</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="icon" href="/static/favicon.svg"/>
+  <link rel="icon" href="{{ '/static/favicon.svg' | bust }}"/>
   <style>
     @font-face {
       font-display: swap;
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 400;
-      src: url('/static/fonts/nunito-sans-regular.woff2') format('woff2');
+      src: url('{{ '/static/fonts/nunito-sans-regular.woff2' | bust }}') format('woff2');
     }
     @font-face {
       font-display: swap;
       font-family: 'Nunito Sans';
       font-style: normal;
       font-weight: 800;
-      src: url('/static/fonts/nunito-sans-bold.woff2') format('woff2');
+      src: url('{{ '/static/fonts/nunito-sans-bold.woff2' | bust }}') format('woff2');
     }
   </style>
-  <link rel="stylesheet" href="/static/css/main.css" />
-  <link id="dark-theme" rel="stylesheet" href="/static/css/dark.css" disabled="true">
+  <link rel="stylesheet" href="{{ '/static/css/main.css' | bust }}" />
+  <link id="dark-theme" rel="stylesheet" href="{{ '/static/css/dark.css' | bust }}" disabled="true">
   <!-- Theme switcher -->
   <script>
     // Global properties and helpers
