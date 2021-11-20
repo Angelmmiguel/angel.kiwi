@@ -7,7 +7,7 @@ tags:
 category: personal
 date: 2021-10-24
 updated: 2021-10-24
-picture: virender-singh-hE0nmTffKtM-unsplash.webp
+picture: /static/images/blog/virender-singh-hE0nmTffKtM-unsplash.webp
 pictureBy: Virender Singh
 pictureUrl: https://unsplash.com/photos/hE0nmTffKtM
 ---
