@@ -1,0 +1,68 @@
+---
+title: Content Security-Policy script hash generator
+extra_css: /static/css/playgrounds/csp-script-hash.css
+layout: layout.njk
+---
+
+<section class="playground block" aria-labelledby="playground-title">
+  <h1 id="playground-title" class="playground-title">Content Security Policy script hash generator</h1>
+  <p id="playground-desc" class="playground-desc">
+    This tool calculate the hash of the provided script so you can configure the Content Security Policy of your site to allow it. If you want to know more about why this is important for web security, check out the <a href="/blog/predictable-inline-scripts">related article</a>.
+  </p>
+
+  <label htmlFor="input-code">Code</label>
+  <textarea id="input-code" placeholder="Add your code here. Remember to include all spaces and breaklines"></textarea>
+
+  <div class="playground-output">
+    <div>
+      <label htmlFor="input-algorithm">Algorithm</label>
+      <select>
+        <option value="SHA-256">Sha 256</option>
+        <option value="SHA-384">Sha 384</option>
+        <option value="SHA-512">Sha 512</option>
+      </select>
+    </div>
+    <div>
+      <label htmlFor="output-result">Content Policy Script Hash</label>
+      <output id="output-result">Add your code below to compute the hash</output>
+    </div>
+  </div>
+</section>
+
+<script>
+  /* Compute the hash of the given code */
+  const getBase64Hash = async (data, algorithm) => {
+    const encoded = new TextEncoder().encode(data);
+    const digest = await crypto.subtle.digest(algorithm, encoded);
+
+    const hashArray = Array.from(new Uint8Array(digest));
+    const hash = hashArray.reduce((str, byte) => str + String.fromCharCode(byte), "");
+
+    return `${algorithm.toLowerCase().replace("-", "")}-${btoa(hash)}`;
+  }
+
+  /* Get the current selected algorithm */
+  const currentAlgorithm = () => document.querySelector("select").value;
+
+  /* Get the current code  */
+  const currentCode = () => document.querySelector("textarea").value;
+
+  /* Calculate the hash and add it to the output section */
+  const calculateHash = async () => {
+    const output = document.querySelector("output");
+    const value = currentCode();
+
+    if (value.length === 0) {
+      output.textContent = "Add your code below to compute the hash";
+    } else {
+      output.textContent = await getBase64Hash(value, currentAlgorithm())
+    }
+  }
+
+  // Add event listeners
+  const textarea = document.querySelector("textarea");
+  const select = document.querySelector("select");
+
+  textarea.addEventListener("input", calculateHash);
+  select.addEventListener("change", calculateHash);
+</script>

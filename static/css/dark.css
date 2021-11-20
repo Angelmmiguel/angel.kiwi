@@ -7,5 +7,10 @@
   --color-nav-decorator: #ffb7f4;
   --color-border: #dfdfdf;
   --color-background: #19141a;
+  --color-pre-background: #871175;
+  --color-code-background: #36323a;
+  --color-input-border: var(--color-secondary);
+  --color-input-background: #ecd2ff;
+
   --size-container-max-witdh: 980px;
 }

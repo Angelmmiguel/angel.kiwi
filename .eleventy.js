@@ -2,6 +2,8 @@ const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 const dayjs = require("dayjs");
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 
 // Calculate the content hash
 const contentHash = (filePath) => {
@@ -28,4 +30,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("date", function (date, format) {
     return dayjs(date).format(format);
   });
+  
+  // Configure Markdown
+  eleventyConfig
+    .setLibrary(
+      'md',
+      markdownIt().use(markdownItAttrs)
+    )
 };
