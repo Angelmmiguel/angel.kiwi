@@ -1,17 +1,17 @@
 ---
 layout: blog.njk
-title: Initialize React states properly
+title: Initialize React states
 tags:
   - post
   - dev
   - frontend
   - react
 category: dev
-date: 2022-01-12
-updated: 2022-01-12
-picture: /static/images/blog/virender-singh-hE0nmTffKtM-unsplash.webp
-pictureBy: Virender Singh
-pictureUrl: https://unsplash.com/photos/hE0nmTffKtM
+date: 2022-01-13
+updated: 2022-01-13
+picture: /static/images/blog/pavel-neznanov-w95Fb7EEcjE-unsplash.webp
+pictureBy: Pavel Neznanov
+pictureUrl: https://unsplash.com/photos/w95Fb7EEcjE
 ---
 
 One of the most important aspects about performance in React applications is how your components _react to changes_. After introducing [hooks](https://reactjs.org/docs/hooks-intro.html) in [2019](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html), the definition of components using functions became the new norm.
@@ -33,20 +33,22 @@ const MyComponent = () => {
   // Increment the given counter
   const incrementCounter = () => setCounter(counter + 1);
 
-  return <section aria-label="Counter">
-    <button onClick={incrementCounter}>Increment</button>
-    <output>{counter}</output>
-  </section>
-}
+  return (
+    <section aria-label="Counter">
+      <button onClick={incrementCounter}>Increment</button>
+      <output>{counter}</output>
+    </section>
+  );
+};
 ```
 
-`MyComponent` defines a new state to manage the current counter value. Following the previous statement, **any time React detects a potential change, it calls `MyComponent` function** and compares the result of the execution with the previous state of the application. 
+`MyComponent` defines a new state to manage the current counter value. Following the previous statement, **any time React detects a potential change, it calls `MyComponent` function** and compares the result of the execution with the previous state of the application.
 
 Now, taking a deep look to this function, there are multiple calls and defintions:
 
-* Call to `useState`
-* Define the `incrementCounter` function
-* Call JSX method under the hood
+- Call to `useState`
+- Define the `incrementCounter` function
+- Call JSX method under the hood
 
 Apart from that, there's a tiny detail that is usually forgotten. `0` is also evaluated. So, **what happens if you need to call a function to calculate the initial state value?**
 
@@ -54,7 +56,7 @@ Apart from that, there's a tiny detail that is usually forgotten. `0` is also ev
 
 Now, let's check the following code:
 
-``` jsx
+```jsx
 import { useState } from "react";
 import { initState } from "./utils";
 
@@ -62,14 +64,14 @@ const MyComponent = () => {
   const [value, setValue] = useState(initState());
 
   // ...
-}
+};
 ```
 
-In this case, `useState` doesn't receive a static value but a function result as parameter. **Note that the `initState` function is called any time React calls `MyComponent`**. However, ` useState` only use the the result once. After its mounted, next executions of the component will discard the `initState` result. 
+In this case, `useState` doesn't receive a static value but a function result as parameter. **Note that the `initState` function is called any time React calls `MyComponent`**. However, ` useState` only use the the result once. After its mounted, next executions of the component will discard the `initState` result.
 
 Depending on the complexity of `initState`, it may cause some performance issues in `MyComponent` even after the first initialization. To avoid it, **React allows you to pass a function that will be executed just once**:
 
-``` jsx
+```jsx
 import { useState } from "react";
 import { initState } from "./utils";
 
@@ -77,7 +79,7 @@ const MyComponent = () => {
   const [value, setValue] = useState(() => initState());
 
   // ...
-}
+};
 ```
 
 This trick is called [_lazy state initialization_](https://reactjs.org/docs/hooks-reference.html#lazy-initial-state).
