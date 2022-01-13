@@ -4,6 +4,7 @@ const path = require("path");
 const dayjs = require("dayjs");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Calculate the content hash
 const contentHash = (filePath) => {
@@ -15,6 +16,9 @@ const contentHash = (filePath) => {
 };
 
 module.exports = function (eleventyConfig) {
+  // Plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   // Copy `css/` to `_site/css`
   eleventyConfig.addPassthroughCopy("static");
 

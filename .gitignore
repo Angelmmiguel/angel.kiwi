@@ -108,3 +108,6 @@ _site
 
 # Mac Stuff
 .DS_Store
+
+# Article drafts
+_drafts/*.md
