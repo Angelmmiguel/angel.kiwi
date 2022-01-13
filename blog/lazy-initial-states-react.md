@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: Lazy React states
+title: Lazy initial states in React
 tags:
   - post
   - dev
