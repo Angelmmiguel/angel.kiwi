@@ -34,13 +34,13 @@ You can define a CSP policy in two ways:
 
 - Returning the Content-Security-Policy HTTP header in the response
 
-  ```
+  ``` plain
   Content-Security-Policy: policy;
   ```
 
 - Create a `<meta>` tag
 
-  ```
+  ``` html
   <meta http-equiv="Content-Security-Policy" content="policy;">
   ```
 
@@ -53,13 +53,13 @@ You can define a CSP policy in two ways:
 
 For example, this policy ensures the browser only executes resources from the same domain:
 
-```
+``` plain
 default-src "self";
 ```
 
 You can allow other domains and specify any domain for certain resources like images:
 
-```
+``` plain
 default-src "self" example.com; img-src *;
 ```
 
@@ -69,13 +69,13 @@ From there, you can start adding stricter policies.
 
 Inline scripts are wild and one of the most common injection vectors. An attacker may run arbitrary code on your site [using different approach](https://owasp.org/www-community/attacks/xss/#description){target="\_blank" rel="noopener noreferrer"}. So, a good practice is to restrict inline scripts via CSP:
 
-```
+``` plain
 default-src "self";
 ```
 
 However, sometimes inline scripts are required. For example, this site uses an inline script to load the site theme. Using the previous CSP policy would block this script. Inline scripts can be enabled using the `unsafe-inline` value:
 
-```
+``` plain
 default-src "self"; script-src "self" "unsafe-inline";
 ```
 
@@ -89,13 +89,13 @@ Nonce strategy requires to **generate a base64 random string on the server for e
 
 1. Set the `nonce` value in every trusted script
 
-   ```
+   ``` html
    <script nonce="RANDOM_NONCE">let my_trusted_script;</script>
    ```
 
 2. Configure the CSP the policy to allow script associated to the nonce:
 
-   ```
+   ``` plain
    default-src "self"; script-src "self" "nonce-RANDOM_NONCE";
    ```
 
@@ -114,7 +114,7 @@ To make things simpler, I created [👉 a small tool 🔨](/playground/csp-scrip
 
 Once you have the hash, configure it as a trusted inline script in the CSP policy:
 
-```{class="break-all"}
+``` plain
 default-src "self"; script-src "self" "sha256-sytuQ9rGYPcMw/DRh3WEVO2EynM4II6TcLanpOZl+NA=";
 ```
 

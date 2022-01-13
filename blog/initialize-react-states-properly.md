@@ -87,3 +87,8 @@ This trick is called [_lazy state initialization_](https://reactjs.org/docs/hook
 Let's be fair. Fortunately, states are initialized with static values most of the times. Not all applications will benefit from this `useState` feature. However, this is one of those difficult performance issues to detect and the solution is quite simple.
 
 **Just keep it in mind when you need to call a function to initialize a state**. And think it twice if it's a requirement because your component will still need to wait for the result when it's mounted.
+
+# References {id="references"}
+
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React useState Hook](https://reactjs.org/docs/hooks-reference.html#usestate)

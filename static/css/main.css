@@ -150,6 +150,7 @@ header.playground .navlogo-title {
 /* Main */
 main {
   grid-area: main;
+  max-width: 100%;
 }
 
 /* Footer */
@@ -454,9 +455,4 @@ pre code {
   padding: 0;
   position: static;
   white-space: normal;
-}
-
-/* Utilities */
-.break-all {
-  word-break: break-word;
 }
