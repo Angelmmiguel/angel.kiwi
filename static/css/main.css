@@ -150,7 +150,7 @@ header.playground .navlogo-title {
 /* Main */
 main {
   grid-area: main;
-  max-width: 100%;
+  max-width: 100vw;
 }
 
 /* Footer */
