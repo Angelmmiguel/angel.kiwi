@@ -1,5 +1,5 @@
 # Runtime
-FROM bitnami/node:16.11.0-prod-debian-10-r2 as builder
+FROM bitnami/node:16.13.2-debian-10-r1 as builder
 
 # Code
 COPY . /app
@@ -14,7 +14,7 @@ RUN npm install
 RUN npm run build
 
 # Base Image
-FROM bitnami/nginx:1.21.3-debian-10-r33
+FROM bitnami/nginx:1.21.5-debian-10-r15
 
 # Copy the application
 COPY --chown=1001 --from=builder /app/_site /app/
