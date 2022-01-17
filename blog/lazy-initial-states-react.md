@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Lazy initial states in React
-description: Use lazy initial states in React when the intial value requires to be computed on users' browser.
+description: Use lazy initial states in React when the intial value requires to be computed on the browser.
 type: article
 tags:
   - post
