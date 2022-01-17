@@ -1,6 +1,7 @@
 ---
 layout: blog.njk
 title: My new online home
+type: article
 tags:
   - post
   - personal

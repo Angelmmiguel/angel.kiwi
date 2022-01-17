@@ -1,22 +1,23 @@
 <head>
   <title>{{ title }}</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1"/>
-
-  <meta name="og:title" content="{{ title }}" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1">
+  <meta name="og:title" content="{{ title }}">
   {% if description %}
-    <meta name="description" content="{{ description }}"/>
+    <meta name="description" content="{{ description }}">
     <meta name="og:description" content="{{ description }}">
   {% endif %}
   {% if type == "article" %}
-    <meta name="og:type" content="{{ type }}"/>
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="og:type" content="{{ type }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@_angelmm">
+    <meta name="twitter:creator" content="@_angelmm">
   {% endif %}
   {% if picture %}
     <meta name="og:image" content="https://angel.kiwi{{ picture }}">
   {% endif %}
 
-  <link rel="icon" href="{{ '/static/favicon.svg' | bust }}"/>
+  <link rel="icon" href="{{ '/static/favicon.svg' | bust }}">
   <style>
     @font-face {
       font-display: swap;
@@ -33,12 +34,12 @@
       src: url('{{ '/static/fonts/nunito-sans-bold.woff2' | bust }}') format('woff2');
     }
   </style>
-  <link rel="stylesheet" href="{{ '/static/css/main.css' | bust }}" />
+  <link rel="stylesheet" href="{{ '/static/css/main.css' | bust }}">
   {% if extra_css %}
-    <link rel="stylesheet" href="{{ extra_css | bust }}" />
+    <link rel="stylesheet" href="{{ extra_css | bust }}">
   {% endif %}
   <link id="dark-theme" rel="stylesheet" href="{{ '/static/css/dark.css' | bust }}" disabled="true">
-  <link id="prism-theme" rel="stylesheet" href="{{ '/static/css/okadia.css' | bust }}" disabled="true" />
+  <link id="prism-theme" rel="stylesheet" href="{{ '/static/css/okadia.css' | bust }}" disabled="true">
   <!-- Theme switcher -->
   <script>
     // Global properties and helpers

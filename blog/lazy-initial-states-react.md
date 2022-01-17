@@ -1,6 +1,7 @@
 ---
 layout: blog.njk
 title: Lazy initial states in React
+type: article
 tags:
   - post
   - dev
