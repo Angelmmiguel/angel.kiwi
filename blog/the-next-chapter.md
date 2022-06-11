@@ -47,8 +47,10 @@ So, what's next?
 
 # My next chapter is WASM!
 
-After some thoughtful days, I decided to join the [Office of the CTO](https://octo.vmware.com/) (OCTO) team in VMware 🥳! I will work with [Daniel](https://twitter.com/vomkriege) and [Jesus](https://es.linkedin.com/in/jesusgm) on [WebAssembly](https://webassembly.org/) (WASM). Our goal is to learn, explore, build projects, share knowledge and understand the potential of WASM. A perfect mix for this new chapter. By the way, we're hiring 😉.
+After some thoughtful days, I decided to join the [Office of the CTO](https://octo.vmware.com/) (OCTO) team in VMware 🥳! I will work with [Daniel](https://twitter.com/vomkriege) and [Jesus](https://es.linkedin.com/in/jesusgm) on [WebAssembly](https://webassembly.org/) (WASM). Our goal is to learn, build projects, share knowledge and explore the potential of WASM. A perfect mix for this new chapter.
 
 I'm really excited about this new adventure. You can expect much more activity around.
 
 See you all! 👋
+
+PS: We're hiring 😉
