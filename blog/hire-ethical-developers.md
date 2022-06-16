@@ -6,14 +6,13 @@ type: article
 tags:
   - post
   - dev
-  - frontend
-  - react
+  - hiring
 category: dev
 date: 2018-04-30
 updated: 2018-04-30
-picture: /static/images/blog/pavel-neznanov-w95Fb7EEcjE-unsplash.webp
-pictureBy: Pavel Neznanov
-pictureUrl: https://unsplash.com/photos/w95Fb7EEcjE
+picture: /static/images/blog/aaron-blanco-tejedor-yH18lOSaZVQ-unsplash.webp
+pictureBy: Aarón Blanco Tejedor
+pictureUrl: https://unsplash.com/photos/yH18lOSaZVQ
 ---
 
 _Imagine you are running a small shop in your city. One day you catch a few people stealing something in your shop. After arguing, they ask to join your shop crew because they know some security points that could be improved._
