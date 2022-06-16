@@ -8,14 +8,14 @@ tags:
 category: personal
 date: 2022-06-15
 updated: 2022-06-15
-picture: /static/images/blog/virender-singh-hE0nmTffKtM-unsplash.webp
-pictureBy: Virender Singh
-pictureUrl: https://unsplash.com/photos/hE0nmTffKtM
+picture: /static/images/blog/jorgen-hendriksen-AIm9aH95PYE-unsplash.webp
+pictureBy: Jorgen Hendriksen
+pictureUrl: https://unsplash.com/photos/AIm9aH95PYE
 ---
 
 3 years ago, the company I was working for, [Bitnami](https://bitnami.com/), was acquired by [VMware](https://blogs.vmware.com/cloud/2019/05/15/vmware-to-acquire-bitnami/). As a worker, going through a company acquisition is a roller coaster experience. You see team mates leaving, the focus changes, old projects are closed, and new ones emerge.
 
-During these 3 years, I have been working on [VMware Application Catalog](https://tanzu.vmware.com/application-catalog). This was an fascinating challenge. I may highlight some of the responsibilities I took during this time:
+During these 3 years, I have been working on [VMware Application Catalog](https://tanzu.vmware.com/application-catalog). This was a fascinating challenge. I may highlight some of the responsibilities I took during this time:
 
 - Conceptualizing and designing the first versions
 - Leading the UI development
