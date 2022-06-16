@@ -20,7 +20,7 @@ layout: layout.njk
     Latest Articles
   </h2>
   <ul class="home-blog-list">
-    {% for post in collections.post %}
+    {% for post in collections.post | reverse %}
       <li>
         <a href="{{ post.url }}">
           <article>
