@@ -407,6 +407,10 @@ footer.bottom:hover {
   word-spacing: 1px;
 }
 
+.post-content img {
+  max-width: 100%;
+}
+
 .post-picture {
   border-top: 1px solid var(--color-border);
   margin-top: 3rem;
