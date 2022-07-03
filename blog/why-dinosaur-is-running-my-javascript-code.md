@@ -46,7 +46,7 @@ If I had to choose just 1 item from the list, **it would be the capability-based
 
 ## Why Deno now?
 
-It is not a secret that NodeJS ecosystem was the target of [many](https://medium.com/checkmarx-security/new-protestware-found-lurking-in-highly-popular-npm-package-d46f8ba67e36), [many](https://www.theregister.com/2022/05/12/npm-attacks-code-white-jfrog/), [many](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident.html,) [many](https://blog.npmjs.org/post/163723642530/crossenv-malware-on-the-npm-registry.html) malware attacks last years. **NodeJS has a vast ecosystem with millions of packages**. Controlling all of them and their dependencies is an impossible task.
+It is not a secret that NodeJS ecosystem was the target of [many](https://medium.com/checkmarx-security/new-protestware-found-lurking-in-highly-popular-npm-package-d46f8ba67e36), [many](https://www.theregister.com/2022/05/12/npm-attacks-code-white-jfrog/), [many](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident.html), [many](https://blog.npmjs.org/post/163723642530/crossenv-malware-on-the-npm-registry.html) malware attacks last years. **NodeJS has a vast ecosystem with millions of packages**. Controlling all of them and their dependencies is an impossible task.
 
 When there is a new security incident with a package, the focus is the same: removing the compromised version. This strategy takes case by case and applies an action to the individual items. However, the root cause is always the same: **any downloaded package gets direct access to many resources in your system**.
 
