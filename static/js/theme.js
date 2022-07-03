@@ -22,12 +22,4 @@
       localStorage.setItem(window.KIWI_THEME.key, window.KIWI_THEME.dark);
     }
   });
-
-  // Code highlighting
-  const codeTheme = document.querySelector("#prism-theme");
-  const codeInPage = document.querySelectorAll("pre code");
-
-  if (codeInPage.length > 0) {
-    codeTheme.disabled = false;
-  }
 })();
