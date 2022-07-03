@@ -1,18 +1,18 @@
 ---
 layout: blog.njk
 title: Why a dinosaur is running my JavaScript code?
-description: TBD
+description: Deno is a simple, modern and secure runtime for JavaScript. They created a solid foundation and now have the tools to make a strong ecosystem around it
 type: article
 tags:
   - post
   - dev
   - javascript
 category: dev
-date: 2022-06-30
-updated: 2022-06-30
+date: 2022-07-04
+updated: 2022-07-04
 picture: /static/images/blog/deno-header.webp
-pictureBy: 
-pictureUrl: 
+pictureBy: Deno
+pictureUrl: https://deno.land
 ---
 
 [Deno](https://deno.land/) is a simple, modern and secure runtime for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [WebAssembly](https://webassembly.org/). In other words, it is a way to run JS, TS, and WASM code outside the browser. This concept may sound familiar to you due to the well-known [NodeJS](https://nodejs.org/). 
@@ -65,8 +65,8 @@ I do not want to go into details here as that will be a different article in the
 
 # A flourishing land
 
-Deno is still in its early days. However, they created a **solid foundation and now have the tools to make it a strong ecosystem**. Their current focus on a [platform](https://deno.com), developer experience, and [frameworks](https://fresh.deno.dev/). This is the perfect mix for me.
+Deno is still in its early days. However, they created a **solid foundation and now have the tools to make a strong ecosystem around it**. Their current focus on developer experience, security and [frameworks](https://fresh.deno.dev/), make a perfect mix for me.
 
-I am eager to see how it evolves, so expect more articles on this topic in my blog. 
+I am eager to see how it evolves, so expect more articles on this topic.
 
 *And before finishing the article, here you have a plot twist: Deno and NodeJS were created by the [same person](https://en.wikipedia.org/wiki/Ryan_Dahl) 🤯*
