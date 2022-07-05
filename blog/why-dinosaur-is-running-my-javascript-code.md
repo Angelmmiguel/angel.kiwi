@@ -11,9 +11,7 @@ category: dev
 date: 2022-07-04
 updated: 2022-07-04
 background: linear-gradient(135deg, rgba(6,4,36,1) 0%, rgba(47,95,150,1) 35%, rgba(117,0,255,1) 100%);
-picture: /static/images/blog/deno-header.webp
-pictureBy: Deno
-pictureUrl: https://deno.land
+picture: /static/images/blog/why-dinosaur-is-running-my-javascript-code/og.png
 ---
 
 [Deno](https://deno.land/) is a simple, modern and secure runtime for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [WebAssembly](https://webassembly.org/). In other words, it is a way to run JS, TS, and WASM code outside the browser. This concept may sound familiar to you due to the well-known [NodeJS](https://nodejs.org/).
@@ -24,7 +22,7 @@ So, why use a different runtime having NodeJS around?
 
 Before highlighting the differences, I want to talk first about the similarities. To demystify NodeJS and Deno, **they are a layer between your code, the operating system, and the [V8 JavaScript engine](https://v8.dev/)**.
 
-![Deno and NodeJS diagram. It indicates how Deno and NodeJS provide system bindings to the V8 engine](/static/images/blog/deno-diagram.webp)
+![Deno and NodeJS diagram. It indicates how Deno and NodeJS provide system bindings to the V8 engine](/static/images/blog/why-dinosaur-is-running-my-javascript-code/deno-diagram.webp)
 
 V8 is an OSS JavaScript and WebAssembly engine created by Google. **It is the actual piece of software running your code**. This engine is one of those technologies you do not usually hear of, but it is everywhere. V8 is used in Chrome, NodeJS, and Deno, among others.
 
@@ -32,7 +30,7 @@ On the other side, **NodeJS and Deno provide V8 all the methods to access and us
 
 # The dinosaur
 
-![The Deno logo. A cute dinosaur with in a black circle](/static/images/blog/deno-header.webp)
+![The Deno logo. A cute dinosaur with in a black circle](/static/images/blog/why-dinosaur-is-running-my-javascript-code/deno-header.webp)
 
 [Deno](https://deno.land/) starts from the same principle as NodeJS: **running JS code in the server**. Then, it introduces a new set of design decisions that make it a different and solid option.
 
