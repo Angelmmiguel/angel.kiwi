@@ -10,9 +10,7 @@ category: personal
 date: 2022-06-15
 updated: 2022-06-15
 background: linear-gradient(135deg, rgba(149,220,231,1) 0%, rgba(93,47,150,1) 35%, rgba(0,140,255,1) 100%);
-picture: /static/images/blog/jorgen-hendriksen-AIm9aH95PYE-unsplash.webp
-pictureBy: Jorgen Hendriksen
-pictureUrl: https://unsplash.com/photos/AIm9aH95PYE
+picture: /static/images/blog/the-next-chapter/og.png
 ---
 
 3 years ago, the company I was working for, [Bitnami](https://bitnami.com/), was acquired by [VMware](https://blogs.vmware.com/cloud/2019/05/15/vmware-to-acquire-bitnami/). As a worker, going through a company acquisition is a roller coaster experience. You see team mates leaving, the focus changes, old projects are closed, and new ones emerge.
