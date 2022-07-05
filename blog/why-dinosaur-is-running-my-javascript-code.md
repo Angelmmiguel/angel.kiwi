@@ -10,12 +10,13 @@ tags:
 category: dev
 date: 2022-07-04
 updated: 2022-07-04
+background: linear-gradient(135deg, rgba(6,4,36,1) 0%, rgba(47,95,150,1) 35%, rgba(117,0,255,1) 100%);
 picture: /static/images/blog/deno-header.webp
 pictureBy: Deno
 pictureUrl: https://deno.land
 ---
 
-[Deno](https://deno.land/) is a simple, modern and secure runtime for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [WebAssembly](https://webassembly.org/). In other words, it is a way to run JS, TS, and WASM code outside the browser. This concept may sound familiar to you due to the well-known [NodeJS](https://nodejs.org/). 
+[Deno](https://deno.land/) is a simple, modern and secure runtime for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [WebAssembly](https://webassembly.org/). In other words, it is a way to run JS, TS, and WASM code outside the browser. This concept may sound familiar to you due to the well-known [NodeJS](https://nodejs.org/).
 
 So, why use a different runtime having NodeJS around?
 
@@ -31,7 +32,9 @@ On the other side, **NodeJS and Deno provide V8 all the methods to access and us
 
 # The dinosaur
 
-[Deno](https://deno.land/) starts from the same principle as NodeJS: **running JS code in the server**. Then, it introduces a new set of design decisions that make it a different and solid option. 
+![The Deno logo. A cute dinosaur with in a black circle](/static/images/blog/deno-header.webp)
+
+[Deno](https://deno.land/) starts from the same principle as NodeJS: **running JS code in the server**. Then, it introduces a new set of design decisions that make it a different and solid option.
 
 Let me highlight some of them:
 
@@ -59,7 +62,7 @@ deno run \
   /tmp/my-folder/test.txt
 ```
 
-If the `cat.ts` library gets compromised and tries to access your etc/passwd file, it will not be able to read it thanks to the granular permissions you granted. Said that all the packages that `cat.ts` runs will get the same permissions. 
+If the `cat.ts` library gets compromised and tries to access your etc/passwd file, it will not be able to read it thanks to the granular permissions you granted. Said that all the packages that `cat.ts` runs will get the same permissions.
 
 I do not want to go into details here as that will be a different article in the blog 😄
 

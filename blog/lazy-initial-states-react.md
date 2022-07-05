@@ -11,6 +11,7 @@ tags:
 category: dev
 date: 2022-01-13
 updated: 2022-01-13
+background: linear-gradient(90deg, rgba(231,166,149,1) 0%, rgba(225,101,237,1) 100%);
 picture: /static/images/blog/pavel-neznanov-w95Fb7EEcjE-unsplash.webp
 pictureBy: Pavel Neznanov
 pictureUrl: https://unsplash.com/photos/w95Fb7EEcjE

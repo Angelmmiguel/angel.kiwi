@@ -8,6 +8,7 @@ tags:
 category: personal
 date: 2021-10-24
 updated: 2021-10-24
+background: linear-gradient(90deg, rgba(231,191,149,1) 0%, rgba(47,150,119,1) 48%, rgba(160,0,255,1) 100%);
 picture: /static/images/blog/virender-singh-hE0nmTffKtM-unsplash.webp
 pictureBy: Virender Singh
 pictureUrl: https://unsplash.com/photos/hE0nmTffKtM

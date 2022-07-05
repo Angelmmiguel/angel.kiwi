@@ -13,6 +13,7 @@ tags:
 category: dev
 date: 2021-11-20
 updated: 2021-11-20
+background: linear-gradient(45deg, rgba(231,221,149,1) 0%, rgba(150,47,107,1) 48%, rgba(0,140,255,1) 100%);
 picture: /static/images/blog/katya-austin-4Vg6ez9jaec-unsplash.webp
 pictureBy: Katya Austin
 pictureUrl: https://unsplash.com/photos/4Vg6ez9jaec

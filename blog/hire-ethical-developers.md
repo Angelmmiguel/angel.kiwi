@@ -10,6 +10,7 @@ tags:
 category: dev
 date: 2018-04-30
 updated: 2018-04-30
+background: radial-gradient(circle, rgba(231,149,223,1) 0%, rgba(87,17,233,1) 100%);
 picture: /static/images/blog/aaron-blanco-tejedor-yH18lOSaZVQ-unsplash.webp
 pictureBy: Aarón Blanco Tejedor
 pictureUrl: https://unsplash.com/photos/yH18lOSaZVQ
