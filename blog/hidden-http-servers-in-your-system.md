@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Hidden HTTP servers in your system
-description: Zero-installation single line commands to run HTTP servers in Linux and macOS. Start serving your files without installing new software
+description: Zero-installation single-line commands to run HTTP servers in Linux and macOS. Start developing without installing new software
 type: article
 tags:
   - post
