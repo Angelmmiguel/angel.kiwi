@@ -85,8 +85,8 @@ header.top {
 .top nav li + li::before {
   content: "×";
   color: var(--color-nav-decorator);
-  padding-right: 1rem;
-  margin-left: -0.5rem;
+  padding-right: 1.25rem;
+  margin-left: -0.75rem;
 }
 
 .top nav li:last-child {
@@ -96,6 +96,13 @@ header.top {
 .top nav li a {
   color: var(--color-text);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color .125s ease-in-out;
+}
+
+.top nav li a:hover {
+  color: var(--color-secondary);
 }
 
 header.playground {
@@ -136,6 +143,12 @@ header.playground .navlogo-title {
   background: transparent;
   border: 0;
   cursor: pointer;
+  height: 23px;
+  padding: 0;
+}
+
+.theme-button [class*="theme-icon"] {
+  transition: fill .125s ease-in-out;
 }
 
 .theme-icon-bg {
@@ -146,6 +159,11 @@ header.playground .navlogo-title {
 .theme-icon-fg {
   fill: var(--color-text);
 }
+
+.theme-button:hover .theme-icon-bg {
+  fill: var(--color-secondary);
+}
+
 
 /* Main */
 main {
