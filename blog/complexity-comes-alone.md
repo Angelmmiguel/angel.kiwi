@@ -10,7 +10,7 @@ category: dev
 date: 2022-12-14
 updated: 2022-12-14
 background: linear-gradient(90deg, rgb(249, 216, 138) 0%, rgb(76, 196, 59) 100%);
-picture: /static/images/blog/complexity-comes-alone/og.jpg
+picture: /static/images/blog/complexity-comes-alone/og.png
 ---
 
 When planning new features, **I may tend to focus on providing maximum flexibility to users**. Configuration files are the norm, and you often spend more time understanding them than coding your solution or using a project.
