@@ -30,7 +30,7 @@ Let me illustrate this with a recent example.
 
 ## Adding support for static files to Wasm Workers Server
 
-I wanted to support static files in the [Wasm Workers Server](https://github.com/vmware-labs/wasm-workers-server/) (`wws`) project. `wws` is a server that runs applications based on the workers model with WebAssembly. Currently, it only supports “workers” or small functions that reply to a specific HTTP endpoint.
+I wanted to [add support for static files](https://github.com/vmware-labs/wasm-workers-server/pull/29) in the [Wasm Workers Server](https://github.com/vmware-labs/wasm-workers-server/) (`wws`) project. `wws` is a server that runs applications based on the workers model with WebAssembly. Currently, it only supports “workers” or small functions that reply to a specific HTTP endpoint.
 
 Most modern applications come with a set of static files (CSS, JS, and HTML) that are required. This information can be coded in a worker, but **converting static files into a function is an unnecessary overhead**. 
 
