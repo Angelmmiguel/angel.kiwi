@@ -7,8 +7,8 @@ tags:
   - post
   - dev
 category: dev
-date: 2022-12-14
-updated: 2022-12-14
+date: 2022-12-15
+updated: 2022-12-15
 background: linear-gradient(90deg, rgb(249, 216, 138) 0%, rgb(76, 196, 59) 100%);
 picture: /static/images/blog/complexity-comes-alone/og.png
 ---
@@ -19,40 +19,40 @@ When planning new features, **I may tend to focus on providing maximum flexibili
 
 Before start coding new features, I always ask myself the following question.
 
-## Is simpler enough?
+## Can I make it simpler?
 
 In other words: 
 
-- Can I cover this use case with a simpler approach?
 - Is there any convention outside that I can leverage?
+- Can I cover this use case with a simpler approach?
 
-Let me illustrate this with a recent example.
+Let me illustrate it with a recent example.
 
 ## Adding support for static files to Wasm Workers Server
 
-I wanted to [add support for static files](https://github.com/vmware-labs/wasm-workers-server/pull/29) in the [Wasm Workers Server](https://github.com/vmware-labs/wasm-workers-server/) (`wws`) project. `wws` is a server that runs applications based on the workers model with WebAssembly. Currently, it only supports “workers” or small functions that reply to a specific HTTP endpoint.
+I wanted to [add support for static files](https://github.com/vmware-labs/wasm-workers-server/pull/29) to the [Wasm Workers Server](https://github.com/vmware-labs/wasm-workers-server/) (`wws`) project. `wws` is a server that runs applications based on the workers model with WebAssembly. Currently, it only supports “workers” or small functions that reply to a specific HTTP endpoint.
 
 Most modern applications come with a set of static files (CSS, JS, and HTML) that are required. This information can be coded in a worker, but **converting static files into a function is an unnecessary overhead**. 
 
-My initial take was to add a new configuration parameter so you can add different `static` folders in your project. That requires you to write a `TOML` configuration to specify which folders contain static assets.
+My initial take was to add a new configuration parameter so you can configure different `static` folders in your project. That option requires you to write a `TOML` configuration file to specify which folders contain static assets.
 
-### Can I cover this use case with a simpler approach?
+### Is there any convention outside that I can leverage?
 
-Looking at other projects, **supporting static assets is a common feature of web frameworks**. That includes different types of web frameworks and [Static Site Generators (SSG)](https://en.wikipedia.org/wiki/Static_site_generator) like [Ruby on Rails](https://rubyonrails.org/), [NextJS](https://nextjs.org/), [Eleventy](https://www.11ty.dev/), or [Astro](https://astro.build).
+Looking at other projects, **supporting static assets is a common feature of web frameworks**. That includes well-known frameworks like [Ruby on Rails](https://rubyonrails.org/), [NextJS](https://nextjs.org/), [Eleventy](https://www.11ty.dev/), or [Astro](https://astro.build).
 
-Most of them use a specific folder that contains static assets (`static` or `public`). In that way, **you don't need to configure it and the framework will automatically serve any file inside it as static**. This approach is called [“convention over configuration"](https://en.wikipedia.org/wiki/Convention_over_configuration). 
+All of them use a specific folder that contains static assets (`static` or `public`). In that way, **you don't need to configure it and the framework will automatically serve any file inside it as static**. This approach is called [“convention over configuration"](https://en.wikipedia.org/wiki/Convention_over_configuration). 
 
 There's no reason to make it configurable. Let's allow multiple `static` folders in `wws`.
 
 ### Can I cover this use case with a simpler approach?
 
-**Having multiple static folders may be confusing**. I had issues when the static file was in a different folder. **That made me think if supporting multiple folders is even required**. Most frameworks support only a single static folder as they usually host a single application. Also, you can add folders inside the `static` one to structure the content.
+**Having multiple static folders may be confusing**. I had issues when the static file I wanted to reference was in a different folder. **That made me think if supporting multiple folders is even required**. Most frameworks support only a single static folder as they usually host a single application. Also, you can add folders inside the `static` one to structure the content.
 
 Finally, **I decided to go for a single `static` folder**.
 
 ## From simple to complex
 
-Configuring `static` folders may be convenient and even a key feature. However, I don't have enough insights, so I developed the simplest approach. **Going from simple to complex is more natural**. You provide new configuration capabilities as the project grows and people start using it.
+Configuring multiple `static` folders may be convenient and even a key feature. However, I don't have enough insights, so I developed the simplest approach. **Going from simple to complex is more natural**. You provide new configuration capabilities as the project grows and people start using it.
 
 > Going from simple to complex is more natural. You provide new configuration capabilities as the project grows and people start using it.
 
@@ -65,6 +65,6 @@ I found many projects focusing on configuration, like the [Webpack](https://webp
 
 [Parcel](https://parceljs.org/), a different JavaScript bundler follows the opposite approach. You can configure things, but it will assume many default options. **For a simple project, you don't need to write a configuration file**. Just run the `parcel` CLI. This was a shift for this kind of tool. Even Webpack started to simplify its configuration files and CLI to reduce the entry barrier.
 
-My advice is to **focus on the value you want to provide your users when planning a new feature**. Then, ask yourself: **can it be simpler?**
+My advice is to **focus on the value you want to provide your users when planning a new feature**. Then, ask yourself: **can I make it simpler?**
 
-> Focus on the value you want to provide your users when planning a new feature. Then, ask yourself: can it be simpler?
+> Focus on the value you want to provide your users when planning a new feature. Then, ask yourself: can I make it simpler?
