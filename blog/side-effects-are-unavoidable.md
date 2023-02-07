@@ -15,9 +15,9 @@ picture: /static/images/blog/side-effects-are-unavoidable/og.png
 
 As developers, we use many different tools in our development workflow. Some of them state they are **opinionated**, and when you download, **they assume you accept these conditions**.
 
-This category includes formatters, linters, and other tools that suggest ways to improve your code. We have great examples in every language, like Eslint, Prettier, Rubocop, and Clippy.
+This category includes formatters, linters, and other tools that suggest ways to improve your code. We have great examples in every language, like [Eslint](https://eslint.org/), [Prettier](https://prettier.io/), [Rubocop](https://rubocop.org/), and [Clippy](https://github.com/rust-lang/rust-clippy).
 
-These tools are part of every developer toolchain. They help you homogenize your code base and ensure all developers write code the same way.
+Even though you don't run these tools in a production environment, they are part of the software development life cycle. They help you homogenize your code base and ensure all developers write code the same way.
 
 Everyone accepts the benefits of these tools, but **what happens when they become the norm?**
 
