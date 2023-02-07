@@ -56,4 +56,4 @@ Even if they expected it, the side effects are unavoidable. The only thing you c
 
 Every case is different, but these ideas may prevent and mitigate these errors. Just don't assume the way people use a tool. If you can, test it directly against a representative group of projects.
 
-And remember, side effects are unavoidable.
+And remember, **side effects are unavoidable**.
