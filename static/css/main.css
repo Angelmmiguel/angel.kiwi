@@ -138,6 +138,10 @@ header.playground .navlogo-title {
   color: var(--color-primary);
 }
 
+.mastodon-text {
+  fill: var(--color-background);
+}
+
 /* Theme switcher */
 .theme-button {
   background: transparent;
