@@ -1,3 +1,16 @@
+---
+layout: blog.njk
+title: Thread errors in Tokio when existing early
+description: TBD
+type: article
+tags:
+  - til
+  - rust
+date: 2023-02-20
+updated: 2023-02-20
+background: linear-gradient(90deg, rgb(247, 96, 96) 0%, rgb(130, 114, 239) 100%);
+---
+
 When using the famous [Tokio](https://tokio.rs/) Rust async runtime library, suddenly your Rust main method becomes asynchronous. That also applies to any other library that uses Tokio under the hood, like [actix-web](https://actix.rs/).
 
 ```rust

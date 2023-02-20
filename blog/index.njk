@@ -1,0 +1,24 @@
+---
+layout: layout.njk
+---
+
+<section class="block" aria-labelledby="blog-title">
+  <h2 id="blog-title" class="home-title">
+    Articles
+  </h2>
+  <p class="home-subtitle">Long articles about different topics</p>
+  <ul class="home-blog-list">
+    {% for post in collections.post | reverse %}
+      <li>
+        <a href="{{ post.url }}">
+          <article>
+            <h3>{{ post.data.title }}</h3>
+            <date>
+              {{ post.data.date | date("YYYY / MM") }}
+            </date>
+          </article>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
