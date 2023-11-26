@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/Angelmmiguel/angel.kiwi#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0"
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
   },
   "dependencies": {
-    "dayjs": "^1.11.3",
-    "markdown-it-attrs": "^4.1.4"
+    "dayjs": "^1.11.10",
+    "markdown-it-attrs": "^4.1.6"
   }
 }
