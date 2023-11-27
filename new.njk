@@ -1,0 +1,79 @@
+---
+layout: mini-layout.njk
+---
+
+<section class="fr gr gr-home">
+  <div class="fr-block fr-block-3c fr-block-br fr-block-bb">
+    <h1>Hey, I'm Angel</h1>
+    <p>I'm a very curious person that loves to learn new things and play videogames. Currently, I work at @VMware as a Frontend Engineer, but I usually play with all the pieces in the stack.</p>
+  </div>
+  <div class="fr-block fr-block-bb">
+    <h2>Socials</h2>
+    <ul>
+      <li>
+        <a href="https://twitter.com/_angelmm"><s>X</s> Twitter</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/angelmmiguel/">LinkedIn</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel">GitHub</a>
+      </li>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-br fr-block-bb">
+    <h2>Projects</h2>
+    <ul class="h">
+      <li>
+        <a href="https://github.com/Angelmmiguel/svgi">SVGI</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/graaf">Graaf</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/material_icons">Material Icons (Ruby)</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/fu">fu</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/pm">pm</a>
+      </li>
+    </ul>
+    <p>
+      <a href="https://github.com/Angelmmiguel">&raquo; Check all projects</a>
+    </p>
+  </div>
+  <div class="fr-block fr-block-3c fr-block-bb">
+    <h2>Articles</h2>
+    <ul>
+      {% for post in collections.post | reverse | limit(3) %}
+        <li>
+          <article>
+            <date class="in mr-05">{{ post.data.date | date("YYYY / MM") }}</date> <a href="{{ post.url }}"><h3 class="in mb-0 mt-0">{{ post.data.title }}</h3> </a>
+          </article>
+        </li>
+      {% endfor %}
+      <p>
+        <a href="/blog">&raquo; Check all articles</a>
+      </p>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-3c fr-block-br">
+    <h2>Latest Public Talks</h2>
+    <ul>
+      {% for talk in talks | limit(3) %}
+        <li>
+          <article>
+            <span class="in mr-05">{{ talk.conference }}</span> <a href="{{ talk.recording_url }}"><h3 class="in mb-0 mt-0">{{ talk.title }}</h3> </a>
+          </article>
+        </li>
+      {% endfor %}
+      <p>
+        <a href="/blog">&raquo; Check all Talks</a>
+      </p>
+    </ul>
+  </div>
+  <div class="fr-block">
+  </div>
+</section>
