@@ -2,35 +2,84 @@
 layout: layout.njk
 ---
 
-<section class="hero block" aria-labelledby="hero-title">
-  <div class="illustration">
-    <img src="{{ '/static/images/illustration.svg' | bust }}" alt="An illustration of myself">
+<section class="fr gr gr-home">
+  <div class="fr-block fr-block-l">
+    <h1>Hey, I'm Angel 👋</h1>
+    <p>I'm a curious engineer that <b>loves to learn new things</b> and play videogames. Currently, I'm working on VMware as a Staff Engineer, leading the Developer Experience efforts on AI Advanced Services and <a href="https://wasmlabs.dev/">WebAssembly</a>.</p>
   </div>
-  <div class="introduction">
-    <h2 id="hero-title">
-      Hello! I'm Angel
-    </h2>
-    <p>I'm a very curious person that loves to learn new things and play videogames. Currently, I work at @VMware as a Frontend Engineer, but I usually play with all the pieces in the stack.
-    <p>Here you can find stuff about all these topics, as well as some projects I come up with. You can even find some random DJ cuts as I'm trying to learn about it.</p>
-  </div>
-</section>
-
-<section class="block" aria-labelledby="blog-title">
-  <h2 id="blog-title" class="home-title">
-    Latest Articles
-  </h2>
-  <ul class="home-blog-list">
-    {% for post in collections.post | reverse %}
+  <div class="fr-block fr-block-s">
+    <h2>Socials</h2>
+    <ul>
       <li>
-        <a href="{{ post.url }}">
-          <article>
-            <h3>{{ post.data.title }}</h3>
-            <date>
-              {{ post.data.date | date("YYYY / MM") }}
-            </date>
-          </article>
-        </a>
+        <a href="https://twitter.com/_angelmm"><s>X</s> Twitter</a>
       </li>
-    {% endfor %}
-  </ul>
+      <li>
+        <a href="https://www.linkedin.com/in/angelmmiguel/">LinkedIn</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel">GitHub</a>
+      </li>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-s">
+    <h2>Projects</h2>
+    <ul class="h">
+      <li>
+        <a href="https://github.com/Angelmmiguel/svgi">SVGI</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/graaf">Graaf</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/material_icons">Material Icons (Ruby)</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/fu">fu</a>
+      </li>
+      <li>
+        <a href="https://github.com/Angelmmiguel/pm">pm</a>
+      </li>
+    </ul>
+    <p>
+      <a href="https://github.com/Angelmmiguel">&raquo; Check all projects</a>
+    </p>
+  </div>
+  <div class="fr-block fr-block-l">
+    <h2>Articles</h2>
+    <ul>
+      {% for post in collections.post | reverse | limit(3) %}
+        <li>
+          <article>
+            <date class="in mr-05">{{ post.data.date | date("YYYY / MM") }}</date> <a href="{{ post.url }}"><h3 class="in mb-0 mt-0">{{ post.data.title }}</h3> </a>
+          </article>
+        </li>
+      {% endfor %}
+      <p>
+        <a href="/blog">&raquo; Check all articles</a>
+      </p>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-l">
+    <h2>Latest Public Talks</h2>
+    <ul class="gap-m">
+      {% for talk in talks | limit(5) %}
+        <li>
+          <article>
+            </span> <a href="{{ talk.recording_url }}"><h3 class="in mb-0 mt-0">{{ talk.title }}</h3> </a>
+            <br />
+            {% if talk.cospeaker != null %}
+              <i>With {{ talk.cospeaker }} at <a href="{{ talk.abstract_url }}">{{ talk.conference }}</a></i>
+            {% else %}
+              <i>At <a href="{{ talk.abstract_url }}">{{ talk.conference }}</a></i>
+            {% endif %}
+          </article>
+        </li>
+      {% endfor %}
+      <p>
+        {# <a href="/talks">&raquo; Check all Talks</a> #}
+      </p>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-s hm">
+  </div>
 </section>
