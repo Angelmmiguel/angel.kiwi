@@ -30,6 +30,11 @@ module.exports = function (eleventyConfig) {
     return `${url}?${params}`;
   });
 
+  // Limit a list
+  eleventyConfig.addFilter("limit", (array, limit) => {
+    return array.slice(0, limit);
+  });
+
   // Date filter
   eleventyConfig.addFilter("date", function (date, format) {
     return dayjs(date).format(format);

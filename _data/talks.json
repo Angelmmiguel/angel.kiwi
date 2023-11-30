@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Runwasi: WebAssembly Serverless for Containerd",
+    "cospeaker": "Francisco (Microsoft)",
+    "conference": "KubeCon NA 2023",
+    "conference_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/",
+    "recording_url": "https://www.youtube.com/watch?v=CbvMPGK8YyE",
+    "abstract_url": "https://sched.co/1R2nF"
+  },
+  {
+    "title": "Develop Wasm Applications with Docker",
+    "cospeaker": "Justin Cormack (Docker)",
+    "conference": "WasmCon 2023",
+    "conference_url": "https://events.linuxfoundation.org/wasmcon/",
+    "recording_url": "https://www.youtube.com/watch?v=xPO3-TOZxW0",
+    "abstract_url": "https://sched.co/1PCM4"
+  },
+  {
+    "title": "Getting Started with AI and WebAssembly",
+    "cospeaker": "Michael Yuan (Second State)",
+    "conference": "WasmCon 2023",
+    "conference_url": "https://events.linuxfoundation.org/wasmcon/",
+    "recording_url": "https://www.youtube.com/watch?v=sxz-MxMNmRY",
+    "abstract_url": "https://sched.co/1PCLs"
+  }
+]
