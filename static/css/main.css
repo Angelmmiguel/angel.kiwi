@@ -442,7 +442,7 @@ blockquote {
 /* Code */
 code,
 textarea {
-  font-family: Consolas, "Courier New", monospace;
+  font-family: "Hack", Consolas, "Courier New", monospace;
 }
 
 code {
