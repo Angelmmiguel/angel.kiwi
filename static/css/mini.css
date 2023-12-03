@@ -28,7 +28,7 @@ header.top {
 }
 
 .fr-block {
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid black;
 }
 
@@ -84,14 +84,17 @@ header.top {
 
 .gr-home {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, minmax(1fr, content));
 }
 
 @media screen and (min-width: 760px) {
   .gr-home {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, minmax(1fr, content));
   }
+}
+
+.gr-card {
+  grid-template-columns: 1fr;
+  max-width: min(95%, 380px);
 }
 
 /* Lists */
@@ -111,6 +114,18 @@ ul.gap-m li:first-child {
   margin-top: 0;
 }
 
+/* Avatar */
+.ava {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.ava-xl {
+  width: 12rem;
+  height: 12rem;
+}
+
 /* Helpers */
 .in {
   display: inline-block;
@@ -122,6 +137,18 @@ ul.gap-m li:first-child {
 
 .mt-0 {
   margin-top: 0;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
 }
 
 .ml-1 {

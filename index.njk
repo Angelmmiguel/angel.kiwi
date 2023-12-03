@@ -8,40 +8,33 @@ layout: layout.njk
     <p>I'm a curious engineer that <b>loves to learn new things</b> and play videogames. Currently, I'm working on VMware as a Staff Engineer, leading the Developer Experience efforts on AI Advanced Services and <a href="https://wasmlabs.dev/">WebAssembly</a>.</p>
   </div>
   <div class="fr-block fr-block-s">
-    <h2>Socials</h2>
-    <ul>
+    <h2>Quick Links</h2>
+    <ul class="h">
       <li>
-        <a href="https://twitter.com/_angelmm"><s>X</s> Twitter</a>
+        <a href="{{ social.twitter }}"><s>X</s> Twitter</a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/angelmmiguel/">LinkedIn</a>
+        <a href="{{ social.linkedin }}">LinkedIn</a>
       </li>
       <li>
-        <a href="https://github.com/Angelmmiguel">GitHub</a>
+        <a href="{{ social.github }}">GitHub</a>
       </li>
+      <p>
+        <a href="/card">&raquo; Check all profiles</a>
+      </p>
     </ul>
   </div>
   <div class="fr-block fr-block-s">
     <h2>Projects</h2>
     <ul class="h">
-      <li>
-        <a href="https://github.com/Angelmmiguel/svgi">SVGI</a>
-      </li>
-      <li>
-        <a href="https://github.com/Angelmmiguel/graaf">Graaf</a>
-      </li>
-      <li>
-        <a href="https://github.com/Angelmmiguel/material_icons">Material Icons (Ruby)</a>
-      </li>
-      <li>
-        <a href="https://github.com/Angelmmiguel/fu">fu</a>
-      </li>
-      <li>
-        <a href="https://github.com/Angelmmiguel/pm">pm</a>
-      </li>
+      {% for project in projects | limit(5) %}
+        <li>
+          <a href="{{ project.url }}">{{ project.name }}</a>
+        </li>
+      {% endfor %}
     </ul>
     <p>
-      <a href="https://github.com/Angelmmiguel">&raquo; Check all projects</a>
+      <a href="{{ social.github }}">&raquo; Check all projects</a>
     </p>
   </div>
   <div class="fr-block fr-block-l">
