@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Cloudflare Web Analytics is not capturing my events
-description: Process to solve CORS issues / errors when Cloudflare Web Analytics is showing 0 visitors on your site and you configured a custom domain.
+description: Process to solve CORS issues / errors when Cloudflare Web Analytics is showing 0 visitors on your site and you configured a custom domain
 type: article
 tags:
   - post

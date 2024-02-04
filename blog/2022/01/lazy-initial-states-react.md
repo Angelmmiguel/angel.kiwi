@@ -7,7 +7,6 @@ tags:
   - post
   - dev
   - frontend
-  - react
 category: dev
 date: 2022-01-13
 updated: 2022-01-13

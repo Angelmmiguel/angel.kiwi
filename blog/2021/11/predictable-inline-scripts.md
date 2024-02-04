@@ -1,14 +1,13 @@
 ---
 layout: blog.njk
 title: Safe and predictable inline scripts
-description: Learn how to use Content Security Policy (CSP) to run only trusted inline scripts in your site.
+description: Learn how to use Content Security Policy (CSP) to run only trusted inline scripts in your site
 type: article
 tags:
   - post
   - dev
   - javascript
-  - js
-  - web
+  - frontend
   - security
 category: dev
 date: 2021-11-20

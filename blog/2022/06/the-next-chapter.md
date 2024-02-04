@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: The next chapter
-description: Yesterday was my last day in my current team. It's time for a change, and here you will find my next chapter :)
+description: Yesterday was my last day in my current team. It's time for a change, and here you will find my next chapter
 type: article
 tags:
   - post

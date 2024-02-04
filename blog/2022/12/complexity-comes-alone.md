@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Complexity comes alone
-description: TBD
+description: Finding a balance between long-term vision and shipping a project is difficult. Trying to solve problems that you may face in the future will cause to find some rabbit holes quickly
 type: article
 tags:
   - post

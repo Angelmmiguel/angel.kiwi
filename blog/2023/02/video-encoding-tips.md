@@ -1,11 +1,11 @@
 ---
 layout: blog.njk
 title: Some personal tips for video encoding
-description: Creating video content is not an easy task. After working on a new video, I collected some of the tips that helped me to configure my encoding options. You can always increase all the quality parameters, but that will increase the processing time too.
+description: Creating video content is not an easy task. After working on a new video, I collected some of the tips that helped me to configure my encoding options. You can always increase all the quality parameters, but that will increase the processing time too
 type: article
 tags:
+  - post
   - til
-  - video
 date: 2023-02-22
 updated: 2023-02-22
 background: linear-gradient(90deg, rgb(102, 18, 204) 0%, rgb(199, 41, 30) 100%);

@@ -1,6 +1,7 @@
 ---
 layout: blog.njk
 title: My new online home
+description: Every few years, I feel that I need to create a new personal site. This is the latest iteration in this proccess, although I really believe this would be the last one
 type: article
 tags:
   - post

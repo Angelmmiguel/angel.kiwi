@@ -1,11 +1,13 @@
 ---
 layout: blog.njk
 title: Provide context when asking questions
-description: Asking questions is one of those underrated skills. By stating your current knowledge, you can confirm you are right and get a more direct response.
+description: Asking questions is one of those underrated skills. By stating your current knowledge, you can confirm you are right and get a more direct response
 type: article
 tags:
+  - post
   - til
-  - leadership
+  - engineering
+  - people
 date: 2023-02-20
 updated: 2023-02-20
 background: linear-gradient(90deg, rgb(30, 224, 235) 0%, rgb(224, 63, 160) 100%);

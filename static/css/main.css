@@ -247,25 +247,24 @@ footer.bottom:hover {
 }
 
 .post-header {
-  margin: 1rem 0;
-}
-
-@media screen and (min-width: 520px) {
-  .post-header {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 150px;
-  }
+  margin: 3rem 0;
 }
 
 .post-header h1 {
   margin: 0;
   line-height: 1.1;
-  font-size: 3.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 520px) {
+  .post-header h1 {
+    font-size: 3.5rem;
+  }
 }
 
 .post-header-meta {
-  text-align: right;
+  text-align: center;
 }
 
 .post-header-meta p {

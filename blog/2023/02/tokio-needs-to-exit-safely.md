@@ -4,6 +4,7 @@ title: Tokio (Rust) needs to exit your program safely
 description: Rust binaries that uses Tokio as runtime will fail if you exit the program manually. Tokio needs to exit your program safely
 type: article
 tags:
+  - post
   - til
   - rust
 date: 2023-02-20

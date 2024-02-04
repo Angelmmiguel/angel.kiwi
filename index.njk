@@ -43,7 +43,9 @@ layout: layout.njk
       {% for post in collections.post | reverse | limit(3) %}
         <li>
           <article>
-            <date class="in mr-05">{{ post.data.date | date("YYYY / MM") }}</date> <a href="{{ post.url }}"><h3 class="in mb-0 mt-0">{{ post.data.title }}</h3> </a>
+            <a href="{{ post.url }}"><h3 class="din mb-0 mt-0">{{ post.data.title }}</h3> </a>
+            <br />
+            <date><i>{{ post.data.date | date("MMMM DD, YYYY") }}</i></date>
           </article>
         </li>
       {% endfor %}
@@ -58,7 +60,7 @@ layout: layout.njk
       {% for talk in talks | limit(5) %}
         <li>
           <article>
-            </span> <a href="{{ talk.recording_url }}"><h3 class="in mb-0 mt-0">{{ talk.title }}</h3> </a>
+            </span> <a href="{{ talk.recording_url }}"><h3 class="din mb-0 mt-0">{{ talk.title }}</h3> </a>
             <br />
             {% if talk.cospeaker != null %}
               <i>With {{ talk.cospeaker }} at <a href="{{ talk.abstract_url }}">{{ talk.conference }}</a></i>

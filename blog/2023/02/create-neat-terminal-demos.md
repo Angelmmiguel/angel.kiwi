@@ -4,9 +4,9 @@ title: Record neat terminal demos
 description: Sometimes you need to record some demo that involves the terminal. Typing the commands is difficult and you may need to record the video multiple times. You can create neat terminal demos with demo-magic 
 type: article
 tags:
+  - post
   - til
-  - terminal
-  - video
+  - tools
 date: 2023-02-23
 updated: 2023-02-23
 background: linear-gradient(90deg, rgb(245, 181, 32) 0%, rgb(59, 173, 204) 100%);

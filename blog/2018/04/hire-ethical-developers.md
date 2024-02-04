@@ -6,7 +6,8 @@ type: article
 tags:
   - post
   - dev
-  - hiring
+  - engineering
+  - people
 category: dev
 date: 2018-04-30
 updated: 2018-04-30
