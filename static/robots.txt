@@ -1,4 +1,0 @@
-Sitemap: https://angel.kiwi/sitemap.xml
-
-User-agent: *
-Disallow:

@@ -4,10 +4,22 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in collections.all %}
-    <url>
-      <loc>{{ site.url }}{{ page.url | url }}</loc>
-      <lastmod>{{ page.date.toISOString() }}</lastmod>
-    </url>
-  {% endfor %}
+  {%- for page in collections.all %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | url }}</loc>
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    <changefreq>{{ page.data.sitemapChangefreq | default("monthly") }}</changefreq>
+    <priority>{{ page.data.sitemapPriority | default(0.8) }}</priority>
+  </url>
+  {%- endfor %}
+  {%- for tag, _ in collections  %}
+    {%- if tag != "post" and tag != "all" %}
+  <url>
+    <loc>{{ site.url }}/tags/{{ tag }}</loc>
+    <lastmod>{{ helpers.currentDate().toISOString() }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    {%- endif %}
+  {%- endfor %}
 </urlset>
