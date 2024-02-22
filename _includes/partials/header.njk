@@ -1,20 +1,23 @@
+{% set titles = languages[page.lang].header %}
+{% set prefix = languages[page.lang].prefix %}
+
 <header class="top block">
-  <a class="navlogo" href="/" aria-label="Homepage">
+  <a class="navlogo" href="{{ "/" | localePrefix }}" aria-label="Homepage">
     {% include 'partials/logo.njk' %}
   </a>
   <nav>
     <ul class="reset">
       <li>
-        <a href="/blog">Articles</a>
+        <a href="{{ "/blog" | localePrefix }}">{{ titles.articles }}</a>
       </li>
       <li>
-        <a href="/tags/til">TIL</a>
+        <a href="{{ "/tags/til" | localePrefix }} ">{{ titles.til }}</a>
       </li>
       <li>
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Angelmmiguel">GitHub</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Angelmmiguel">{{ titles.github }}</a>
       </li>
       <li>
-        <a href="/card">Social</a>
+        <a href="{{ "/card" | localePrefix }} ">{{ titles.social }}</a>
       </li>
       <li>
         <button id="switch-theme" class="theme-button" aria-label="Dark Theme" aria-pressed="false">

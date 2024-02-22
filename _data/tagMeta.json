@@ -1,42 +1,86 @@
 {
-  "til": {
-    "title": "TIL (Today I learned)",
-    "description": "A collection of short articles about things I learn everyday."
+  "en": {
+    "til": {
+      "title": "TIL (Today I learned)",
+      "description": "A collection of short articles about things I learn everyday."
+    },
+    "personal": {
+      "title": "Personal",
+      "description": "Fun articles about anything outside of development."
+    },
+    "dev": {
+      "title": "Development",
+      "description": "Any article about development. From UI to assembly."
+    },
+    "tools": {
+      "title": "Development Tools",
+      "description": "Articles about tools you can use when developing."
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "description": "Articles about this programming language and ecosystem."
+    },
+    "rust": {
+      "title": "Rust",
+      "description": "Articles about this programming language and ecosystem."
+    },
+    "frontend": {
+      "title": "Frontend",
+      "description": "The frontend ecosystem is vast!"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Articles about security in all the different aspects of development."
+    },
+    "engineering": {
+      "title": "Engineering",
+      "description": "Articles about growing an engineering career."
+    },
+    "people": {
+      "title": "People",
+      "description": "Articles about the human-side of engineering."
+    }
   },
-  "personal": {
-    "title": "Personal",
-    "description": "Fun articles about anything outside of development."
-  },
-  "dev": {
-    "title": "Development",
-    "description": "Any article about development. From UI to assembly."
-  },
-  "tools": {
-    "title": "Development Tools",
-    "description": "Articles about tools you can use when developing."
-  },
-  "javascript": {
-    "title": "JavaScript",
-    "description": "Articles about this programming language and ecosystem."
-  },
-  "rust": {
-    "title": "Rust",
-    "description": "Articles about this programming language and ecosystem."
-  },
-  "frontend": {
-    "title": "Frontend",
-    "description": "The frontend ecosystem is vast!"
-  },
-  "security": {
-    "title": "Security",
-    "description": "Articles about security in all the different aspects of development."
-  },
-  "engineering": {
-    "title": "Engineering",
-    "description": "Articles about growing an engineering career."
-  },
-  "people": {
-    "title": "People",
-    "description": "Articles about the human-side of engineering."
+  "es": {
+    "til": {
+      "title": "TIL (Hoy he aprendido)",
+      "description": "Una colección de artículos cortos sobre algo que he aprendido ese día."
+    },
+    "personal": {
+      "title": "Personal",
+      "description": "Artículos sobre cualquier cosa fuera de la ingeniería."
+    },
+    "dev": {
+      "title": "Desarrollo",
+      "description": "Cualquier artículo de desarrollo. Desde UIs a código en ensamblador."
+    },
+    "tools": {
+      "title": "Herramientas de desarrollo",
+      "description": "Artículos sobre herramientas que puedes utilizar para desarollar."
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "description": "Artículos sobre este lenguaje y su ecosistema."
+    },
+    "rust": {
+      "title": "Rust",
+      "description": "Artículos sobre este lenguaje y su ecosistema."
+    },
+    "frontend": {
+      "title": "Frontend",
+      "description": "¡El ecosistema de Frontend es gigantesco!"
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Artículos sobre seguridad en cualquier aspecto del desarrollo."
+    },
+    "engineering": {
+      "title": "Ingeniería",
+      "description": "Artículos sobre crecer en una carrera de ingeniería."
+    },
+    "people": {
+      "title": "Personas",
+      "description": "Artículo sobre la parte humana de la ingeniería."
+    }
   }
 }

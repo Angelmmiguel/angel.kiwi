@@ -10,6 +10,9 @@ eleventyExcludeFromCollections: true
     <lastmod>{{ page.date.toISOString() }}</lastmod>
     <changefreq>{{ page.data.sitemapChangefreq | default("monthly") }}</changefreq>
     <priority>{{ page.data.sitemapPriority | default(0.8) }}</priority>
+    {%- for link in page.url | locale_links %}
+    <xhtml:link rel="alternate" hreflang="{{link.lang}}" href="{{ site.url }}{{link.url}}" />
+    {%- endfor %}
   </url>
   {%- endfor %}
   {%- for tag, _ in collections  %}
@@ -19,6 +22,14 @@ eleventyExcludeFromCollections: true
     <lastmod>{{ helpers.currentDate().toISOString() }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}/es/tags/{{ tag }}" />
+  </url>
+  <url>
+    <loc>{{ site.url }}/es/tags/{{ tag }}</loc>
+    <lastmod>{{ helpers.currentDate().toISOString() }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/tags/{{ tag }}" />
   </url>
     {%- endif %}
   {%- endfor %}

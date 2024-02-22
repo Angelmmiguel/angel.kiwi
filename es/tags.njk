@@ -1,0 +1,45 @@
+---
+layout: layout.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - post
+    - all
+permalink: /es/tags/{{ tag }}/
+---
+
+{% set tagList = collections[tag] %}
+{% set tagInfo = tagMeta[page.lang][tag] %}
+
+<section class="block" aria-labelledby="blog-title">
+  <h1 class="t-xl mb-05">
+    {{ tagInfo.title }}
+  </h1>
+  <p class="tc-light mt-05">{{ tagInfo.description }}</p>
+  <ul class="gap-m clean">
+    {% for post in tagList | byLocale("es") | reverse %}
+      <li>
+        <article>
+          <a href="{{ post.url }}">
+            <h2 class="din t-l mb-05">{{ post.data.title }}</h2>
+          </a>
+          <p class="mt-0 mw-text">
+            {{ post.data.description }}.
+          </p>
+          <p class="tc-light t-s">
+            <date class="mr-1">
+              {{ post.data.date | date("MMMM DD, YYYY") }}
+            </date>
+            <span class="tags">
+              {% for postTag in post.data.tags | filterList("post") %}
+                <a href="/es/tags/{{postTag}}" class="tag">#{{ postTag }}</a>
+              {% endfor %}
+            </span>
+          </p>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

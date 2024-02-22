@@ -2,6 +2,11 @@
   <title>{{ title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1">
+  <!-- I18N -->
+  {% for link in page.url | locale_links %}
+  <link rel="alternate" hreflang="{{link.lang}}" href="{{site.url}}{{link.url}}" />
+  {% endfor %}
+  <!-- Meta -->
   <meta name="og:title" content="{{ title }}">
   {% if description %}
     <meta name="description" content="{{ description }}">
@@ -14,7 +19,7 @@
     <meta name="twitter:creator" content="@_angelmm">
   {% endif %}
   {% if picture %}
-    <meta name="og:image" content="https://angel.kiwi{{ picture }}">
+    <meta name="og:image" content="{{site.url}}{{ picture }}">
   {% endif %}
 
   <link rel="icon" href="{{ '/static/favicon.svg' | bust }}">

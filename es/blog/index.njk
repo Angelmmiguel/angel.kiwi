@@ -4,11 +4,11 @@ layout: layout.njk
 
 <section class="block" aria-labelledby="blog-title">
   <h1 class="t-xl mb-05">
-    Articles
+    Blog
   </h1>
-  <p class="tc-light mt-05">All the articles in the blog, they cover from development to personal topics.</p>
+  <p class="tc-light mt-05">Todos los artículos de este blog, tratando desde Ingeniería de Software a música.</p>
   <ul class="gap-m clean">
-    {% for post in collections.post | reverse %}
+    {% for post in collections.post | byLocale("es") | reverse %}
       <li>
         <article>
           <a href="{{ post.url }}">

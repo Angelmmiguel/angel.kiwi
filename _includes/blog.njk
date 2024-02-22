@@ -2,6 +2,8 @@
 layout: layout.njk
 ---
 
+{% set alternative = languages[page.lang].blog.also %}
+
 <article class="post block">
   <div class="post-separator" style="background: {{ background }}"></div>
   <header class="post-header">
@@ -10,9 +12,16 @@ layout: layout.njk
       <p class="tc-light"><date>{{ date | date("dddd, MMMM DD, YYYY")}}</date></p>
       <p class="tags">
         {% for tag in tags | filterList("post") %}
-          <a href="/tags/{{tag}}" class="tag">#{{ tag }}</a>
+          <a href="{{ "/tags/" | localePrefix }}{{tag}}" class="tag">#{{ tag }}</a>
         {% endfor %}
       </p>
+      {% for link in page.url | locale_links %}
+      <p>
+        <a rel="alternate" hreflang="{{link.lang}}" href="{{link.url}}">
+          {{ alternative }}
+        </a>
+      </p>
+      {% endfor %}
     </div>
   </header>
   <div class="post-content">
