@@ -25,7 +25,7 @@ What's happening in the developer's world?
 
 # Professional ethics
 
-Recently, I read [this article](https://medium.com/@timotheejeannin/i-built-a-screenshot-api-and-some-guy-was-mining-cryptocurrencies-with-it-cd188dfae773) about a man that was using a screenshot API to earn money mining cryptocurrencies. The article talks about how the company managed the situation and stopped him.
+Recently, I read [this article](https://medium.com/@timotheejeannin/i-built-a-screenshot-api-and-some-guy-was-mining-cryptocurrencies-with-it-cd188dfae773) about a man that was using a screenshot API to earn money [mining cryptocurrencies](https://en.wikipedia.org/wiki/Cryptocurrency). The article talks about how the company managed the situation and stopped him.
 
 The conversation was respectful and finally, the man stopped minning crypto using that service. I don't want to discuss how the company managed the situation, but I'd like to highlight some parts of the conversation:
 

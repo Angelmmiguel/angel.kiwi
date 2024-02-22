@@ -5,6 +5,7 @@ const dayjs = require("dayjs");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { EleventyI18nPlugin } = require('@11ty/eleventy');
 
 // Calculate the content hash
 const contentHash = (filePath) => {
@@ -24,6 +25,11 @@ module.exports = function (eleventyConfig) {
 
   // Copy the _redirects file
   eleventyConfig.addPassthroughCopy("_redirects");
+
+  // I18N
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: 'en' // Required
+  });
 
   // Cache busting methods
   // @ref https://rob.cogit8.org/posts/2020-10-28-simple-11ty-cache-busting/
@@ -47,6 +53,26 @@ module.exports = function (eleventyConfig) {
         return el != val;
       }
     });
+  });
+
+  // Filter a list by the locale (lang)
+  eleventyConfig.addFilter("byLocale", (array, locale) => {
+    return array.filter(el => el.page.lang == locale);
+  });
+
+  // Set the right locale. This is a limitation on the I18N plugin,
+  // as it sets the page.lang locale by default. This site uses no prefix
+  // for English
+  eleventyConfig.addFilter("localePrefix", function(url) {
+    let prefix = "";
+
+    // Adding the prefix manually as I cannot access the languages
+    // data from here.
+    if (this.page.lang == "es") {
+      prefix = "/es";
+    }
+
+    return `${prefix}${url}`;
   });
 
   // Date filter

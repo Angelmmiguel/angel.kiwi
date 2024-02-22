@@ -1,0 +1,80 @@
+---
+layout: layout.njk
+---
+
+<section class="fr gr gr-home">
+  <div class="fr-block fr-block-l">
+    <h1>Hola! Soy Ángel 👋</h1>
+    <p>Soy un ingeniero de software al que le <b>encanta aprender cosas nuevas</b> y jugar a videojuegos. Actualmente trabajo en Broadcom como Staff Engineer, liderando el equipo de Experiencia de Desarrollo (Developer Experience) en el equipo de AI y servicios avanzados. También trabajo en varios proyectos basados en WebAssembly!</p>
+  </div>
+  <div class="fr-block fr-block-s">
+    <h2>Perfiles</h2>
+    <ul class="h">
+      <li>
+        <a href="{{ social.twitter }}"><s>X</s> Twitter</a>
+      </li>
+      <li>
+        <a href="{{ social.linkedin }}">LinkedIn</a>
+      </li>
+      <li>
+        <a href="{{ social.github }}">GitHub</a>
+      </li>
+      <p>
+        <a href="/card">&raquo; Todos los enlaces</a>
+      </p>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-s">
+    <h2>Proyectos</h2>
+    <ul class="h">
+      {% for project in projects | limit(5) %}
+        <li>
+          <a href="{{ project.url }}">{{ project.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <p>
+      <a href="{{ social.github }}">&raquo; Todos los proyectos</a>
+    </p>
+  </div>
+  <div class="fr-block fr-block-l">
+    <h2>Artículos</h2>
+    <ul>
+      {% for post in collections.post | byLocale("es") | reverse | limit(3) %}
+        <li>
+          <article>
+            <a href="{{ post.url }}"><h3 class="din mb-0 mt-0">{{ post.data.title }}</h3> </a>
+            <br />
+            <date><i>{{ post.data.date | date("MMMM DD, YYYY") }}</i></date>
+          </article>
+        </li>
+      {% endfor %}
+      <p>
+        <a href="/blog">&raquo; Todos los artículos</a>
+      </p>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-l">
+    <h2>Últimas charlas</h2>
+    <ul class="gap-m">
+      {% for talk in talks | limit(5) %}
+        <li>
+          <article>
+            </span> <a href="{{ talk.recording_url }}"><h3 class="din mb-0 mt-0">{{ talk.title }}</h3> </a>
+            <br />
+            {% if talk.cospeaker != null %}
+              <i>Con {{ talk.cospeaker }} en <a href="{{ talk.abstract_url }}">{{ talk.conference }}</a></i>
+            {% else %}
+              <i>En <a href="{{ talk.abstract_url }}">{{ talk.conference }}</a></i>
+            {% endif %}
+          </article>
+        </li>
+      {% endfor %}
+      <p>
+        {# <a href="/talks">&raquo; Check all Talks</a> #}
+      </p>
+    </ul>
+  </div>
+  <div class="fr-block fr-block-s hm">
+  </div>
+</section>

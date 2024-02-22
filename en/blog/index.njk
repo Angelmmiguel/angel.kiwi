@@ -1,25 +1,14 @@
 ---
 layout: layout.njk
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - post
-    - all
-permalink: /tags/{{ tag }}/
 ---
-
-{% set tagList = collections[ tag ] %}
-{% set tagInfo = tagMeta[ tag ] %}
 
 <section class="block" aria-labelledby="blog-title">
   <h1 class="t-xl mb-05">
-    {{ tagInfo.title }}
+    Blog
   </h1>
-  <p class="tc-light mt-05">{{ tagInfo.description }}</p>
+  <p class="tc-light mt-05">All the articles in the blog, they cover from development to personal topics.</p>
   <ul class="gap-m clean">
-    {% for post in tagList | reverse %}
+    {% for post in collections.post | byLocale("en") | reverse %}
       <li>
         <article>
           <a href="{{ post.url }}">
@@ -33,8 +22,8 @@ permalink: /tags/{{ tag }}/
               {{ post.data.date | date("MMMM DD, YYYY") }}
             </date>
             <span class="tags">
-              {% for postTag in post.data.tags | filterList("post") %}
-                <a href="/tags/{{postTag}}" class="tag">#{{ postTag }}</a>
+              {% for tag in post.data.tags | filterList("post") %}
+                <a href="/tags/{{tag}}" class="tag">#{{ tag }}</a>
               {% endfor %}
             </span>
           </p>
