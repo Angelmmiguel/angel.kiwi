@@ -12,7 +12,7 @@ updated: 2023-02-20
 background: linear-gradient(90deg, rgb(247, 96, 96) 0%, rgb(130, 114, 239) 100%);
 ---
 
-When using the famous [Tokio](https://tokio.rs/) Rust async runtime library, suddenly your Rust main method becomes asynchronous. That also applies to any other library that uses Tokio under the hood, like [actix-web](https://actix.rs/).
+When using the famous [Tokio](https://tokio.rs/) Rust async runtime library, suddenly your Rust `main` method becomes asynchronous. That also applies to any other library that uses Tokio under the hood, like [actix-web](https://actix.rs/).
 
 ```rust
 #[tokio::main]
@@ -22,7 +22,7 @@ async fn main() -> Result<()> {
 }
 ```
 
-It seems magic, although Tokio spawns and entire runtime to manage asynchronous code and ensure your program exits successfully. Tokio requires to control the entire lifecycle of your application and any halt in the middle may cause your application to panik.
+It seems magic, although Tokio spawns an entire runtime to manage asynchronous code and ensure your program exits successfully. Tokio requires to control the entire lifecycle of your application and any halt in the middle may cause your application to panic.
 
 This is exactly the issue [I fixed today in Wasm Workers Server](https://github.com/vmware-labs/wasm-workers-server/issues/96). The `wws` binary was panicking after any errored command:
 
