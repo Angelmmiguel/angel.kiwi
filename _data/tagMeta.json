@@ -39,6 +39,10 @@
     "people": {
       "title": "People",
       "description": "Articles about the human-side of engineering."
+    },
+    "nix": {
+      "title": "Nix",
+      "description": "My journey learning and using Nix."
     }
   },
   "es": {
@@ -81,6 +85,10 @@
     "people": {
       "title": "Personas",
       "description": "Artículo sobre la parte humana de la ingeniería."
+    },
+    "nix": {
+      "title": "Nix",
+      "description": "Mi proceso de aprendizaje sobre el ecosistema de Nix"
     }
   }
 }
