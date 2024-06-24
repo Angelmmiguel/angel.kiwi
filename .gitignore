@@ -111,3 +111,13 @@ _site
 
 # Article drafts
 _drafts/*.md
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
