@@ -2,12 +2,12 @@
 :root {
   --color-text: #ece7f5;
   --color-text-light: #b6aebe;
-  --color-primary: #c96fff;
+  --color-primary: #C77DFF;
   --color-secondary: #fc50eb;
   --color-nav-decorator: #ffb7f4;
-  --color-border: #dfdfdf;
-  --color-background: #19141a;
-  --color-pre-background: #391f42;
+  --color-border: #3C096C;
+  --color-background: #10002B;
+  --color-pre-background: #0d001e;
   --color-code-background: #36323a;
   --color-input-border: var(--color-secondary);
   --color-input-background: #ecd2ff;

@@ -5,9 +5,9 @@
   --color-primary: #9e00ff;
   --color-secondary: #e21ecf;
   --color-nav-decorator: #dfdfdf;
-  --color-border: #dfdfdf;
+  --color-border: #f1d9ff;
   --color-background: #fff;
-  --color-pre-background: #231b1f;
+  --color-pre-background: #0d001e;
   --color-code-background: #dfdfdf;
   --color-input-border: #ccc;
   --color-input-background: #fafafa;
@@ -22,14 +22,14 @@ header.top {
 
 /* Building blocks*/
 .fr {
-  border: 1px solid black;
+  border: 1px solid var(--color-border);
   margin: 1rem auto;
   max-width: min(95%, 1100px);
 }
 
 .fr-block {
   padding: 1.5rem;
-  border: 1px solid black;
+  border: 1px solid var(--color-border);
 }
 
 .fr-block ul {
