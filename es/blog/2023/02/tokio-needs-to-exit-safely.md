@@ -27,7 +27,7 @@ Parece magina, pero Tokio genera un entorno completo de ejecución para gestiona
 
 Hoy justo he corregido [este problema en Wasm Workers Server]((https://github.com/vmware-labs/wasm-workers-server/issues/96)). Antes, `wws` lanzaba el siguiente error cuando fallaba un comando: 
 
-```rust
+```plain
 thread '<unnamed>' panicked at 'cannot access a Thread Local Storage value during or after destruction: AccessError', /rustc/fc594f15669680fa70d255faec3ca3fb507c3405/library/std/src/thread/local.rs:422:26
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 fatal runtime error: failed to initiate panic, error 5

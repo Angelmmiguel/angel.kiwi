@@ -26,7 +26,7 @@ It may seem like magic, but Tokio spawns an entire runtime to handle asynchronou
 
 This is exactly the issue [I fixed today in Wasm Workers Server](https://github.com/vmware-labs/wasm-workers-server/issues/96). The `wws` binary was panicking after any errored command:
 
-```rust
+```plain
 thread '<unnamed>' panicked at 'cannot access a Thread Local Storage value during or after destruction: AccessError', /rustc/fc594f15669680fa70d255faec3ca3fb507c3405/library/std/src/thread/local.rs:422:26
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 fatal runtime error: failed to initiate panic, error 5
