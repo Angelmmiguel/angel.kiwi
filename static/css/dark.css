@@ -12,3 +12,8 @@
   --color-input-border: var(--color-secondary);
   --color-input-background: #ecd2ff;
 }
+
+/* This style doesn't look good on light mode */
+a:hover {
+  text-shadow: 0 0 6px rgba(226, 30, 20, 0.75);
+}

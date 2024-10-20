@@ -98,6 +98,11 @@ header.top {
 }
 
 /* Lists */
+ol li::marker,
+ul li::marker {
+  color: var(--color-secondary);
+}
+
 ul.h {
   margin: 0;
   padding: 0;
