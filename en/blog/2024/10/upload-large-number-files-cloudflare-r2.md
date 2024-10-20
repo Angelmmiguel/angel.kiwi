@@ -19,7 +19,7 @@ After testing the different options, I found a clear winner for efficiently hand
 
 # How to Upload 7000 Files to Cloudflare R2
 
-Like S3, the first step to upload your files to Cloudflare R2 is to create a bucket. In Cloudflare, a bucket is a container for your files with a set of permissions, domains, and rules. However, I quickly hit a wall: the Cloudflare UI only allows you to upload 100 files at a time.
+Like S3, the first step to upload your files to Cloudflare R2 is to create a bucket. In Cloudflare, a bucket is a container for your files with a set of permissions, domains, and rules. I tried to upload my 7000 files over the UI, but I quickly hit a wall: the Cloudflare UI only allows you to upload 100 files at a time.
 
 Next, I explored [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/). While it offers the `r2 putObject` method for uploading files to your R2 bucket, I encountered two major issues:
 
