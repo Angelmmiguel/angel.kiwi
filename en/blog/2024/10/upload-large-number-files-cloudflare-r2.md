@@ -23,25 +23,26 @@ Like S3, the first step to upload your files to Cloudflare R2 is to create a buc
 
 Next, I explored [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/). While it offers the `r2 putObject` method for uploading files to your R2 bucket, I encountered two major issues:
 
-1. **Token issues**: The R2 API token generated using the [official guide](https://developers.cloudflare.com/r2/api/s3/tokens/) doesn't work out of the box. The Wrangler CLI complains about missing permissions for the `/memberships` endpoint. (There's a [workaround available](https://github.com/cloudflare/workers-sdk/issues/1422#issuecomment-1189496401), but it's not ideal.)
+* **Token issues**: The R2 API token generated using the [official guide](https://developers.cloudflare.com/r2/api/s3/tokens/) doesn't work out of the box. The Wrangler CLI complains about missing permissions for the `/memberships` endpoint. (There's a [workaround available](https://github.com/cloudflare/workers-sdk/issues/1422#issuecomment-1189496401), but it's not ideal)
 
-2. **Slow uploads**: Wrangler can't upload entire folders, forcing you to upload files one by one - an extremely slow process for 7000+ files.
+* **Slow uploads**: Wrangler can't upload entire folders, forcing you to upload files one by one - an extremely slow process for 7000+ files
 
 Wrangler was clearly not an option for me, so I tried the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) instead. Cloudflare provides a [comprehensive guide on using the AWS CLI with R2 buckets](https://developers.cloudflare.com/r2/examples/aws-cli/), but if you're short on time, here's a quick guide to upload an entire folder with lot of files:
 
-1. Generate a [new R2 token](https://developers.cloudflare.com/r2/api/s3/tokens/) or reuse an existing one. You only need the `access_key_id` and the `access_key_secret`.
+1. Generate a [new R2 token](https://developers.cloudflare.com/r2/api/s3/tokens/) or reuse an existing one. You only need the `access_key_id` and the `access_key_secret`
 
-2. Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+2. Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 3. Configure the AWS CLI with your Cloudflare credentials:
 
    ```bash
+   # Enter your `access_key_id` and `access_key_secret.
+   # Set the region name to `auto`, and the output format to `json`
    aws configure
    ```
   
-   Enter your `access_key_id` and `access_key_secret`, set the region name to `auto`, and the output format to `json`.
 
-4. Retrieve your Cloudflare account ID and R2 bucket name from the Cloudflare R2 overview page.
+4. Retrieve your Cloudflare account ID and R2 bucket name from the Cloudflare R2 overview page
 
 5. Upload your folder using the AWS `s3 sync` command. This command synchronizes the contents of your local folder with the R2 bucket:
 
@@ -59,5 +60,6 @@ Wrangler was clearly not an option for me, so I tried the [AWS CLI](https://docs
        s3 sync <FOLDER_PATH> s3://<YOUR_BUCKET_NAME>/<SUBFOLDER> --recursive
      ```
 
-I recommend using the `s3 sync` command because it only uploads files that are missing or have changed in the bucket. Alternatively, you can use `s3 cp`, but be aware that it will upload all files, even if they're already present in the bucket. 
+I recommend using the `s3 sync` command because it only uploads files that are missing or have changed in the bucket. Alternatively, you can use `s3 cp`, but be aware that it will upload all files, even if they're already present in the bucket.
+
 **This distinction is important for billing purposes**: each upload counts as a writing request to the bucket ([Class A Operation](https://developers.cloudflare.com/r2/pricing/)). By using `s3 sync`, you can minimize these operations and potentially reduce costs, especially when dealing with large numbers of files.
