@@ -35,7 +35,7 @@ Wrangler was clearly not an option for me, so I tried the [AWS CLI](https://docs
 
 3. Configure the AWS CLI with your Cloudflare credentials:
 
-   ```bash
+   ```shell
    # Enter your `access_key_id` and `access_key_secret.
    # Set the region name to `auto`, and the output format to `json`
    aws configure
@@ -48,14 +48,14 @@ Wrangler was clearly not an option for me, so I tried the [AWS CLI](https://docs
 
    - To upload to the bucket root:
   
-     ```bash
+     ```shell
      aws --endpoint-url https://<ACCOUNT_ID>.r2.cloudflarestorage.com \
        s3 sync <FOLDER_PATH> s3://<YOUR_BUCKET_NAME>/ --recursive
      ```
    
    - To upload to a specific subfolder in the bucket:
      
-     ```bash
+     ```shell
      aws --endpoint-url https://<ACCOUNT_ID>.r2.cloudflarestorage.com \
        s3 sync <FOLDER_PATH> s3://<YOUR_BUCKET_NAME>/<SUBFOLDER> --recursive
      ```
