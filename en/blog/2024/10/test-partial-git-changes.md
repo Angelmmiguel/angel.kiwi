@@ -6,9 +6,10 @@ type: article
 tags:
   - post
   - dev
-date: 2024-10-20
-updated: 2024-10-20
-background: linear-gradient(90deg, rgb(80, 23, 44) 0%, rgb(188, 12, 70) 100%);
+  - til
+date: 2024-10-27
+updated: 2024-10-27
+background: linear-gradient(90deg, rgb(30, 90, 34) 0%, rgb(20, 190, 20) 100%);
 ---
 
 This morning, I was coding a project I'm working on. After applying several changes to a file, I needed to test the changes in a single method. I wanted to isolate those changes, revert all the others temporarily, test them, and reapply all the other changes back.
@@ -62,19 +63,21 @@ Going back to the purpose of this article, select all the chunks you want to kee
 
 ## Stash everything else
 
-Once you have selected the chunks you want to keep or test, you only need to put apart all the other changes. If you run `git stash` directly, it will stash all the changes, including the one you selected. To stash only the other changes, you need to run it with the `--keep-index` flag:
+Once you have selected the chunks you want to keep or test, you only need to put apart all the other changes. If you run `git stash` directly, it will stash all the changes, including the ones you selected. 
+
+When checking the [git-scm.com](https://git-scm.com/docs/git-stash#Documentation/git-stash.txt---keep-index) site, I found the `--keep-index` flag: 
+
+> -k / --keep-index / --no-keep-index
+> 
+> This option is only valid for push and save commands.
+>
+> All changes already added to the index are left intact.
+
+
+That's the last piece in this puzzle. To stash only the other changes, run the `stash` command with the `--keep-index` flag:
 
 ```sh
 git stash --keep-index
 ```
 
-From the [git-scm.com](https://git-scm.com/docs/git-stash#Documentation/git-stash.txt---keep-index) site:
-
-> -k
-> --keep-index
-> --no-keep-index
-> This option is only valid for push and save commands.
->
-> All changes already added to the index are left intact.
-
-That's exactly what I needed! Once I'm done testing it, I can recover all the changes with `git stash pop` :)
+Once I'm done testing it, I can recover all the changes with `git stash pop` 🤩
