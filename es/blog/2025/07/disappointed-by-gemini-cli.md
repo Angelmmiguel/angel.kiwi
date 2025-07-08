@@ -43,4 +43,4 @@ En este punto, me rendí. **He estado usando Claude Code durante un mes sin ning
 
 La competencia es enorme en el ecosistema de agentes de código por IA. Cuando los desarrolladores quieren probar una nueva herramienta, especialmente una que compite con otra que ya usan, la experiencia de instalación es crítica.
 
-**Google tiene muy buenos modelos de IA** (Veo 3 es impresionant), pero los desarrolladores necesitan poder acceder fácilmente a ellas. Con Claude Code, pude empezar a trabajar en minutos con mi plan Pro. Con Gemini CLI, no pude llegar a lanzar un _prompt_.
+**Google tiene muy buenos modelos de IA** (Veo 3 es increíble), pero los desarrolladores necesitan poder acceder fácilmente a ellas. Con Claude Code, pude empezar a trabajar en minutos con mi plan Pro. Con Gemini CLI, no pude llegar a lanzar un _prompt_.
