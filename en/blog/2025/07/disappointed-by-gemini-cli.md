@@ -25,7 +25,7 @@ After digging in GitHub issues, I found that [the `--debug` shows the authentica
 
 1. Copy the URL manually
 2. Set up SSH port forwarding for the OAuth callback
-3. Complete the authentication in a different machine with a browser
+3. Complete the authentication in my Macbook
 
 # Do you have a project?
 
@@ -43,4 +43,4 @@ At this point, I gave up. **I've been using Claude Code for a month without any 
 
 In the AI tools space, the competition is huge. When developers want to try a new tool, especially one that competes with something they're already happy with, the onboarding experience is critical.
 
-**Google has great AI capabilities** (Veo 3 is so cool), but if developers can't easily access them, what's the point? With Claude Code, I was productive within minutes. With Gemini CLI, I spent over an hour just trying to run a prompt.
+**Google has great AI capabilities** (Veo 3 is so cool!), but if developers can't easily access them, what's the point? With Claude Code, I was productive within minutes. With Gemini CLI, I couldn't run a prompt.
