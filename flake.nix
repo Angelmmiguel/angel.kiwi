@@ -2,7 +2,7 @@
   description = "Nix development environment for NodeJS";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -14,7 +14,7 @@
       {
         devShells.default = pkgs.mkShell {
           packages = [ 
-            pkgs.nodejs_20 
+            pkgs.nodejs_24
           ];
 
           shellHook = ''

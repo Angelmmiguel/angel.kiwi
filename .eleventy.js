@@ -1,11 +1,15 @@
-const crypto = require("crypto");
-const fs = require("fs");
-const path = require("path");
-const dayjs = require("dayjs");
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const { EleventyI18nPlugin } = require('@11ty/eleventy');
+import crypto from "crypto";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import dayjs from "dayjs";
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { EleventyI18nPlugin } from '@11ty/eleventy';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Calculate the content hash
 const contentHash = (filePath) => {
@@ -16,7 +20,7 @@ const contentHash = (filePath) => {
   return hash.digest("hex");
 };
 
-module.exports = function (eleventyConfig) {
+export default function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -76,14 +80,14 @@ module.exports = function (eleventyConfig) {
   });
 
   // Date filter
-  eleventyConfig.addFilter("date", function (date, format) {
+  eleventyConfig.addFilter("date", function(date, format) {
     return dayjs(date).format(format);
   });
-  
+
   // Configure Markdown
   eleventyConfig
     .setLibrary(
       'md',
       markdownIt().use(markdownItAttrs)
-    )
-};
+    );
+}

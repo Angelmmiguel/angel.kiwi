@@ -2,6 +2,7 @@
   "name": "angel.kiwi",
   "version": "0.1.0",
   "description": "My (latest) personal site",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "eleventy --serve",
@@ -19,7 +20,7 @@
   },
   "homepage": "https://github.com/Angelmmiguel/angel.kiwi#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
   },
   "dependencies": {

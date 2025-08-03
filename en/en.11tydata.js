@@ -1,5 +1,5 @@
 // From https://github.com/madrilene/eleventy-i18n/
-module.exports = {
+export default {
   lang: 'en',
   langPrefix: '',
   permalink: function (data) {
