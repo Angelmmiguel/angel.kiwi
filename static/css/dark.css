@@ -9,11 +9,17 @@
   --color-background: #10002B;
   --color-pre-background: #0d001e;
   --color-code-background: #36323a;
-  --color-input-border: var(--color-secondary);
-  --color-input-background: #ecd2ff;
+  --color-input-border: #3C096C;
+  --color-input-background: #1a0033;
 }
 
 /* This style doesn't look good on light mode */
 a:hover {
   text-shadow: 0 0 6px rgba(226, 30, 20, 0.75);
+}
+
+/* Collections page dark mode adjustments */
+.project-status-favorite {
+  color: #4caf50;
+  border-color: #4caf50;
 }

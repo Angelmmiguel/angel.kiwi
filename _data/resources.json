@@ -1,0 +1,30 @@
+{
+  "links": [
+    {
+      "title": "Upgrading to Eleventy v3",
+      "url": "https://mxb.dev/blog/eleventy-v3-update/",
+      "domain": "mxb.dev",
+      "feed": "https://mxb.dev/feed.xml"
+    }
+  ],
+  "projects": [
+    {
+      "title": "SST",
+      "description": "Infrastructure as a configuration with multiple providers in JavaScript",
+      "url": "https://sst.dev",
+      "status": "to-try"
+    },
+    {
+      "title": "Bun",
+      "description": "All-in-one JavaScript runtime & toolkit designed for speed, complete with bundler, test runner, and Node.js-compatible package manager",
+      "url": "https://bun.sh",
+      "status": "to-try"
+    },
+    {
+      "title": "Tauri",
+      "description": "Build smaller, faster, and more secure desktop applications with a web frontend",
+      "url": "https://tauri.app",
+      "status": "to-try"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+---
+layout: layout.njk
+title: Grimoire
+description: My personal grimoire of useful links and interesting projects
+---
+
+<section class="block" aria-labelledby="collections-title">
+  <h1 class="t-xl mb-05" id="collections-title">
+    Grimoire
+  </h1>
+  <p class="tc-light mt-05">My personal grimoire of useful links and interesting projects</p>
+  
+  <div class="search-container">
+    <input 
+      type="search" 
+      id="collections-search" 
+      class="search-input" 
+      placeholder="Search the grimoire..."
+      aria-label="Search grimoire"
+    >
+  </div>
+
+  <div class="collections-content">
+    <details class="collection-section" open>
+      <summary class="collection-header">
+        <h2 class="t-l din">Links</h2>
+      </summary>
+      <ul class="links-list clean" id="links-list">
+        {% for link in resources.links %}
+          <li class="link-item" data-searchable="{{ link.title | lower }} {{ link.domain | lower }}">
+            <div class="link-content">
+              <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="link-title">
+                {{ link.title }}
+              </a>
+              <div class="link-meta">
+                {% if link.feed %}
+                  <a href="{{ link.feed }}" target="_blank" rel="noopener noreferrer" class="link-feed link-domain-tag">
+                    Feed / RSS
+                  </a>
+                {% endif %}
+                <a href="https://{{ link.domain }}" target="_blank" rel="noopener noreferrer" class="link-domain-tag">
+                  {{ link.domain }}
+                </a>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+
+    <details class="collection-section" open>
+      <summary class="collection-header">
+        <h2 class="t-l din">Projects</h2>
+      </summary>
+      <div class="projects-grid" id="projects-grid">
+        {% for project in resources.projects %}
+          <article class="project-card" data-searchable="{{ project.title | lower }} {{ project.description | lower }}">
+            <h3 class="project-title t-m">
+              <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+            </h3>
+            <p class="project-description tc-light t-s">{{ project.description }}</p>
+            <div>
+              <span class="project-status project-status-{{ project.status | replace(' ', '-') }}">                
+                {% if project.status == "to-try" %}Not tested{% endif %}
+                {% if project.status == "tested" %}Tested{% endif %}
+                {% if project.status == "favorite" %}Recommended{% endif %}
+              </span>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </details>
+  </div>
+</section>
+
+<script src="{{ '/static/js/collections.js' | bust }}"></script>

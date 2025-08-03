@@ -4,6 +4,7 @@ export default {
     header: {
       articles: "Blog",
       til: "TIL",
+      collections: "Grimoire",
       github: "GitHub",
       social: "Social"
     },
@@ -16,6 +17,7 @@ export default {
     header: {
       articles: "Blog",
       til: "TIL",
+      collections: "Grimorio",
       github: "GitHub",
       social: "Social"
     },
