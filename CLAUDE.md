@@ -52,3 +52,21 @@ nix develop
 ```
 
 Otherwise, ensure you have Node.js 20+ installed.
+
+## Writing Style Guidelines
+
+### Spanish Articles
+
+When writing Spanish content for the blog:
+
+1. **Opening sentences**: Start with temporal context when appropriate (e.g., "Siempre que trabajo en...")
+2. **Word preferences**:
+   - Use "gestionar" instead of "administrar" for managing systems
+   - Use "utilizar" for "to use" in formal contexts
+   - Prefer personal phrasing like "Lo mismo me ocurre" over literal translations
+3. **Direct communication**:
+   - Use direct imperatives (e.g., "Anota" instead of "Necesitas anotar")
+   - Address the reader directly with "tú" form
+   - Remove unnecessary articles for conciseness
+4. **Transitions**: Use transition words like "Finalmente" instead of "Ahora" for better flow
+5. **Technical terms**: Keep technical terms in English (Vim, Unraid, etc.) without translation
